@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administrator</title>
+    <link rel="stylesheet" href="../assets/css/base/base.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../assets/css/administrator.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <section class="header__container container">
+        <!-- mostrar y ocultar input para buscar -->
+        <input type="checkbox" id="header__checked" />
+
+        <a href="../index.html" class="header__logo"
+          ><img
+            src="../assets/images/Logo.svg"
+            alt="logo"
+            class="header__image"
+        /></a>
+
+        <div class="header__search">
+          <div class="search hidden">
+            <input
+              type="text"
+              class="search__input"
+              placeholder="¿Qué deseas buscar?"
+            />
+          </div>
+          <label for="header__checked" class="search__label" title="Buscar">
+            <img
+              src="../assets/images/Icone.svg"
+              alt="icon-search disabled"
+              class="search__icon"
+            />
+          </label>
+        </div>
+      </section>
+    </header>
+
+    <main class="main">
+      <section class="products__container container">
+        <article class="products__header">
+          <section class="products__texts">
+            <h2 class="products__title">Todos los productos</h2>
+            <a
+              href="../screens/add-new-product.html"
+              class="products__button button"
+              >Agregar Producto</a
+            >
+          </section>
+          <template class="cards">
+            <div class="cards__container">
+              <div class="card">
+                <img
+                  src="../assets/images/unsplash_6FDXGY9J6y4.png"
+                  alt=""
+                  class="card__image"
+                />
+                <p class="card__title">Producto</p>
+                <p class="card__price">60.00</p>
+                <a href="../screens/product.html" class="card__cta"
+                  >Ver producto</a
+                >
+                <div class="card__icons">
+                  <img
+                    src="../assets/images/edit.svg"
+                    alt="icon-edit"
+                    title="Editar"
+                    id="editar"
+                  />
+                  <img
+                    src="../assets/images/delete.svg"
+                    alt="icon-delete"
+                    title="Borrar"
+                    id="delete"
+                  />
+                </div>
+              </div>
+            </div>
+          </template>
+        </article>
+
+        <h2 class="products__message">No hay productos para mostrar</h2>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <section class="footer__container container">
+        <div class="links__container">
+          <img src="../assets/images/Logo.svg" alt="logo" class="link__logo" />
+          <nav class="nav">
+            <ul class="nav__ul">
+              <li class="nav__list"><a href="#">Quienes somos</a></li>
+              <li class="nav__list"><a href="#">Politíca de privacidad</a></li>
+              <li class="nav__list"><a href="#">Programa de fidelidad</a></li>
+              <li class="nav__list"><a href="#">Nuestras tiendas</a></li>
+              <li class="nav__list"><a href="#">quiero ser franquiciado</a></li>
+              <li class="nav__list"><a href="#">Anuncie aquí</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <form class="form">
+          <h3 class="form__title">Hable con nosotros</h3>
+          <div class="form__container">
+            <div class="form__group">
+              <input
+                type="text"
+                id="name"
+                class="form__input"
+                placeholder=" "
+              />
+              <label for="name" class="form__label">Nombre</label>
+              <span class="form__line"></span>
+            </div>
+            <div class="form__group">
+              <textarea
+                id="message"
+                class="form__input form__input--textarea"
+                placeholder=" "
+              ></textarea>
+              <label for="message" class="form__label"
+                >Escribe tu mensaje</label
+              >
+              <span class="form__line"></span>
+            </div>
+            <input
+              type="submit"
+              class="form__button button"
+              value="Enviar mensaje"
+            />
+          </div>
+        </form>
+      </section>
+    </footer>
+  </body>
+</html>

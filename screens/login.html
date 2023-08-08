@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="../assets/css/base/base.css" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../assets/css/login.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <section class="header__container container">
+        <!-- mostrar y ocultar input para buscar -->
+        <input type="checkbox" id="header__checked" />
+
+        <a href="../index.html" class="header__logo"
+          ><img
+            src="../assets/images/Logo.svg"
+            alt="logo"
+            class="header__image"
+        /></a>
+
+        <div class="header__search">
+          <div class="search hidden">
+            <input
+              type="text"
+              class="search__input"
+              placeholder="¿Qué deseas buscar?"
+            />
+          </div>
+          <label for="header__checked" class="search__label" title="Buscar">
+            <img
+              src="../assets/images/Icone.svg"
+              alt="icon-search disabled"
+              class="search__icon"
+            />
+          </label>
+        </div>
+      </section>
+    </header>
+
+    <main class="main">
+      <section class="main__container">
+        <form class="form form__size">
+          <h3 class="form__title form__title--size">Iniciar Seción</h3>
+          <div class="form__container">
+            <div class="form__group">
+              <input
+                type="email"
+                id="email"
+                class="form__input"
+                placeholder=" "
+              />
+              <label for="email" class="form__label"
+                >Escriba su correo electronico</label
+              >
+              <span class="form__line"></span>
+            </div>
+            <div class="form__group">
+              <input
+                type="password"
+                id="pass"
+                class="form__input"
+                placeholder=" "
+              />
+              <label for="pass" class="form__label"
+                >Escriba su contraseña</label
+              >
+              <span class="form__line"></span>
+            </div>
+            <input
+              type="submit"
+              class="form__button--size button"
+              value="Entrar"
+            />
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <section class="footer__container container">
+        <div class="links__container">
+          <img src="../assets/images/Logo.svg" alt="logo" class="link__logo" />
+          <nav class="nav">
+            <ul class="nav__ul">
+              <li class="nav__list"><a href="#">Quienes somos</a></li>
+              <li class="nav__list"><a href="#">Politíca de privacidad</a></li>
+              <li class="nav__list"><a href="#">Programa de fidelidad</a></li>
+              <li class="nav__list"><a href="#">Nuestras tiendas</a></li>
+              <li class="nav__list"><a href="#">quiero ser franquiciado</a></li>
+              <li class="nav__list"><a href="#">Anuncie aquí</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <form class="form">
+          <h3 class="form__title">Hable con nosotros</h3>
+          <div class="form__container">
+            <div class="form__group">
+              <input
+                type="text"
+                id="name"
+                class="form__input"
+                placeholder=" "
+              />
+              <label for="name" class="form__label">Nombre</label>
+              <span class="form__line"></span>
+            </div>
+            <div class="form__group">
+              <textarea
+                id="message"
+                class="form__input form__input--textarea"
+                placeholder=" "
+              ></textarea>
+              <label for="message" class="form__label"
+                >Escribe tu mensaje</label
+              >
+              <span class="form__line"></span>
+            </div>
+            <input
+              type="submit"
+              class="form__button button"
+              value="Enviar mensaje"
+            />
+          </div>
+        </form>
+      </section>
+    </footer>
+  </body>
+</html>
