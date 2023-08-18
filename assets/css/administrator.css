@@ -37,16 +37,34 @@
   position: relative;
 }
 
+.card__id {
+  margin-top: 5px;
+}
+
 .card__icons {
   position: absolute;
   top: 10px;
   right: 10px;
 }
-.card__icons img:first-child {
-  padding-right: 10px;
-}
-.card__icons img:hover {
+
+#edit,
+#delete {
+  background-color: var(--color-primary);
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 28px;
   cursor: pointer;
+}
+#delete:hover {
+  background-color: #ff0000;
+}
+
+.card__icons i {
+  color: var(--color-white);
+  font-size: 1rem;
 }
 
 /* media queries */

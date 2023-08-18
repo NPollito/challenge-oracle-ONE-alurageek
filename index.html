@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alurageek</title>
+
+    <!-- links cdn-fontawesome y styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./assets/css/base/base.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -48,22 +57,26 @@
       <section class="banner">
         <div class="banner__container container">
           <div class="banner__text">
-            <h1 class="banner__title">Febrero Promocional</h1>
+            <h1 class="banner__title">Agosto Promocional</h1>
             <p class="banner__paragraph">
               Productos seleccionados con 33% de descuento
             </p>
-            <a href="#" class="banner__cta button">Ver consolas</a>
+            <a
+              href="./screens/see-everything.html?id=1"
+              class="banner__cta button"
+              >Ver consolas</a
+            >
           </div>
         </div>
       </section>
 
       <section class="products__container container">
-        <template class="products__header">
+        <template class="products">
           <section class="products__texts">
             <h2 class="products__title">Star Wars</h2>
             <a href="#" class="products__link"
-              >Ver todo <img src="./assets/images/arrow.svg" alt="arrow"
-            /></a>
+              >Ver todo <i class="fa-solid fa-arrow-right"></i
+            ></a>
           </section>
           <section class="cards">
             <div class="cards__container">
@@ -83,7 +96,7 @@
           </section>
         </template>
 
-        <h2 class="products__message">No hay productos para mostrar</h2>
+        <!-- <h2 class="products__message">No hay productos para mostrar</h2> -->
       </section>
     </main>
 
@@ -136,5 +149,7 @@
         </form>
       </section>
     </footer>
+
+    <script type="module" src="./controllers/products-controller.js"></script>
   </body>
 </html>

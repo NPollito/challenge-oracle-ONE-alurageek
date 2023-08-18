@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Administrator</title>
+
+    <!-- links cdn-fontawesome y styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="../assets/css/base/base.css" />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../assets/css/administrator.css" />
@@ -52,9 +61,10 @@
               >Agregar Producto</a
             >
           </section>
-          <template class="cards">
+
+          <section class="cards">
             <div class="cards__container">
-              <div class="card">
+              <template class="card">
                 <img
                   src="../assets/images/unsplash_6FDXGY9J6y4.png"
                   alt=""
@@ -62,29 +72,19 @@
                 />
                 <p class="card__title">Producto</p>
                 <p class="card__price">60.00</p>
-                <a href="../screens/product.html" class="card__cta"
-                  >Ver producto</a
-                >
+                <p class="card__id">#</p>
                 <div class="card__icons">
-                  <img
-                    src="../assets/images/edit.svg"
-                    alt="icon-edit"
-                    title="Editar"
-                    id="editar"
-                  />
-                  <img
-                    src="../assets/images/delete.svg"
-                    alt="icon-delete"
-                    title="Borrar"
-                    id="delete"
-                  />
+                  <a href="./add-new-product.html" title="Editar" id="edit"
+                    ><i class="fa-solid fa-pen"></i
+                  ></a>
+                  <span id="delete" title="Borrar"
+                    ><i class="fa-solid fa-trash"></i
+                  ></span>
                 </div>
-              </div>
+              </template>
             </div>
-          </template>
+          </section>
         </article>
-
-        <h2 class="products__message">No hay productos para mostrar</h2>
       </section>
     </main>
 
@@ -137,5 +137,10 @@
         </form>
       </section>
     </footer>
+
+    <script
+      type="module"
+      src="../controllers/administrator-controller.js"
+    ></script>
   </body>
 </html>
