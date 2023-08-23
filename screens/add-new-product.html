@@ -32,7 +32,7 @@
         /></a>
 
         <div class="header__login">
-          <a href="./screens/login.html" class="header__cta button"
+          <a href="./administrator.html" class="header__cta button"
             >Menú Administrador</a
           >
         </div>
@@ -67,6 +67,8 @@
                 id="url-image"
                 class="form__input"
                 placeholder=" "
+                name="Url"
+                value="https://picsum.photos/200/300?random=100"
               />
               <label for="url-image" class="form__label"
                 >URL de la imagen</label
@@ -78,9 +80,11 @@
               <label class="form__label--select" for="category"
                 >Categoría:</label
               >
-              <select name="productos" id="category">
-                <option value="">-- Selecciona una categoría --</option>
-                <option value="consolas">Consolas</option>
+              <select id="category" name="Categoria">
+                <option value="0">-- Selecciona una categoría --</option>
+                <option value="1">Star ward</option>
+                <option value="2">Consolas</option>
+                <option value="3">Otros</option>
               </select>
             </div>
 
@@ -89,6 +93,7 @@
                 type="text"
                 id="nom-product"
                 class="form__input"
+                name="Nombre"
                 placeholder=" "
               />
               <label for="nom-product" class="form__label"
@@ -101,6 +106,7 @@
                 type="number"
                 id="price"
                 class="form__input"
+                name="Precio"
                 placeholder=" "
               />
               <label for="price" class="form__label">Precio del producto</label>
@@ -110,6 +116,7 @@
               <textarea
                 id="description"
                 class="form__input form__input--textarea"
+                name="Descripcion"
                 placeholder=" "
               ></textarea>
               <label for="description" class="form__label"
@@ -119,62 +126,25 @@
             </div>
             <input
               type="submit"
-              class="form__button--size button"
+              class="form__button form__button--size button"
               value="Agregar Producto"
+              disabled
             />
           </div>
         </form>
       </section>
     </main>
 
-    <footer class="footer">
-      <section class="footer__container container">
-        <div class="links__container">
-          <img src="../assets/images/Logo.svg" alt="logo" class="link__logo" />
-          <nav class="nav">
-            <ul class="nav__ul">
-              <li class="nav__list"><a href="#">Quienes somos</a></li>
-              <li class="nav__list"><a href="#">Politíca de privacidad</a></li>
-              <li class="nav__list"><a href="#">Programa de fidelidad</a></li>
-              <li class="nav__list"><a href="#">Nuestras tiendas</a></li>
-              <li class="nav__list"><a href="#">quiero ser franquiciado</a></li>
-              <li class="nav__list"><a href="#">Anuncie aquí</a></li>
-            </ul>
-          </nav>
-        </div>
-
-        <form class="form">
-          <h3 class="form__title">Hable con nosotros</h3>
-          <div class="form__container">
-            <div class="form__group">
-              <input
-                type="text"
-                id="name"
-                class="form__input"
-                placeholder=" "
-              />
-              <label for="name" class="form__label">Nombre</label>
-              <span class="form__line"></span>
-            </div>
-            <div class="form__group">
-              <textarea
-                id="message"
-                class="form__input form__input--textarea"
-                placeholder=" "
-              ></textarea>
-              <label for="message" class="form__label"
-                >Escribe tu mensaje</label
-              >
-              <span class="form__line"></span>
-            </div>
-            <input
-              type="submit"
-              class="form__button button"
-              value="Enviar mensaje"
-            />
-          </div>
-        </form>
-      </section>
-    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+      integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="module"
+      src="../controllers/addProduct-controller.js"
+    ></script>
+    <script type="module" src="../js/validate-form.js"></script>
   </body>
 </html>

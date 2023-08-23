@@ -89,6 +89,10 @@
   display: none;
 }
 
+.form__button {
+  opacity: 0.5;
+}
+
 /* media queries */
 
 @media screen and (min-width: 700px) {

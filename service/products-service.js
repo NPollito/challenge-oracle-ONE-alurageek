@@ -32,10 +32,30 @@ const sixProducts = (id) => {
     });
 };
 
+const createProduct = (image, title, price, details, categoryId) => {
+    
+    return fetch('http://localhost:3000/products', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({id: uuid.v4(), image, title, price, details, categoryId})
+    })
+};
+
+const deleteProduct = (id) => {
+
+    return fetch(`http://localhost:3000/products/${id}`, {
+        method: 'DELETE',
+    })
+};
+
 export const productServices = {
 
     categoryList,
     productList,
     seeProduct,
-    sixProducts
+    sixProducts,
+    createProduct,
+    deleteProduct
 };

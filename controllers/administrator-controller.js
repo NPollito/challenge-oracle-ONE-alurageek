@@ -17,11 +17,23 @@ function cardHTML(image, title, price, id) {
             <a href="./add-new-product.html" title="Editar" id="edit">
                 <i class="fa-solid fa-pen"></i>
             </a>
-            <span id="delete" title="Borrar">
+            <span id="${id}" class="delete" title="Borrar">
                 <i class="fa-solid fa-trash"></i>
             </span>
         </div>
     `
+
+    //Elimimar productos seleccionado
+    const buttonDelete = card.querySelector('span')
+
+    buttonDelete.addEventListener('click', () => {
+
+        const id = buttonDelete.id;
+        
+        productServices.deleteProduct(id)
+         .then(answer => console.log(answer))
+         .catch(err => console.log(err))
+    })
 
     return card
 }

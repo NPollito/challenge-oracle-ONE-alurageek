@@ -1,3 +1,4 @@
+// generar html con js
 export function productsHTML(category, id) {
 
     const article = document.createElement('ARTICLE');
@@ -16,7 +17,7 @@ export function productsHTML(category, id) {
         </section>
     `
 
-    return article
+    return article;
 }
 
 export function cardHTML(image, title, price, id) {
@@ -32,5 +33,5 @@ export function cardHTML(image, title, price, id) {
         <a href="../screens/product.html?id=${id}" class="card__cta">Ver producto</a>
     `
 
-    return card
+    return card;
 }

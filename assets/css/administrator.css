@@ -48,7 +48,7 @@
 }
 
 #edit,
-#delete {
+.delete {
   background-color: var(--color-primary);
   width: 28px;
   height: 28px;
@@ -58,7 +58,7 @@
   line-height: 28px;
   cursor: pointer;
 }
-#delete:hover {
+.delete:hover {
   background-color: #ff0000;
 }
 
