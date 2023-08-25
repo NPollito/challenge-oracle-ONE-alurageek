@@ -9,12 +9,12 @@
       "categoryId": 0
     },
     {
-      "id": "2",
       "image": "https://picsum.photos/200/300?random=2",
       "title": "Star Wars",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
-      "categoryId": 0
+      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus mas ipson xd ",
+      "price": "78",
+      "categoryId": 0,
+      "id": "2"
     },
     {
       "id": "3",

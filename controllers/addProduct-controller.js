@@ -1,4 +1,5 @@
 import { productServices } from "../service/products-service.js"
+import { successAlert } from "./templates.js"
 
 const form = document.querySelector('.form');
 
@@ -15,7 +16,6 @@ form.addEventListener('submit', (e) => {
     const formContainer = document.querySelector('.form__container');
 
     //Validar categoria
-
     let categoryId;
 
     if ( category.value == 1 ) {
@@ -32,19 +32,13 @@ form.addEventListener('submit', (e) => {
     setTimeout(() => {
 
         // Alerta de enviado con exito
-        const successAlert = document.createElement('P')
-        successAlert.classList.add('succesAlert' ,'button')
-        successAlert.textContent = "Producto creado con éxito"
-
-        formContainer.appendChild(successAlert)
+        formContainer.appendChild(successAlert("Producto creado con éxito"))
 
         setTimeout(() => {
 
             productServices.createProduct(urlProduct, nomProduct, priceProduct, descriptionProduct, categoryId)
-            .then(answer => console.log(answer))
+            .then(() => window.location.href = "/screens/administrator.html")
             .catch(err => console.error(err))
-            
-            successAlert.remove()
 
         }, 2000);
         

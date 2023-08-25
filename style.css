@@ -93,6 +93,28 @@
   opacity: 0.5;
 }
 
+/*==================== aside */
+.aside {
+  background-color: #000000;
+  height: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aside p {
+  font-family: var(--font-raleway);
+  color: var(--color-white);
+  padding-right: 10px;
+  font-size: 1.2rem;
+}
+
+.aside i {
+  color: var(--color-white);
+  font-size: 2.1rem;
+}
+
 /* media queries */
 
 @media screen and (min-width: 700px) {

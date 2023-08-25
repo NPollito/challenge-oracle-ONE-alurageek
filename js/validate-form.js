@@ -101,5 +101,4 @@ document.addEventListener('DOMContentLoaded', function() {
         form.reset()
         template.checkData(formData)
     }
-
 })

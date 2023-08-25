@@ -18,7 +18,7 @@ export function productsHTML(category, id) {
     `
 
     return article;
-}
+};
 
 export function cardHTML(image, title, price, id) {
 
@@ -34,4 +34,34 @@ export function cardHTML(image, title, price, id) {
     `
 
     return card;
+};
+
+export function successAlert(message) {
+
+    const alertSucces = document.createElement('P');
+
+    alertSucces.classList.add('alertSucces' ,'button');
+
+    alertSucces.textContent = `${message}`
+
+    return alertSucces;
+};
+
+export function deleteAlert(top) {
+
+    const windowDelete = document.createElement('ASIDE')
+
+    windowDelete.classList.add('delete-product')
+    windowDelete.innerHTML = `
+        <div class="delete__container">
+            <span class="delete__logo"><i class="fa-solid fa-skull-crossbones"></i></span>
+            <p class="delete__title">Estas seguro que deseas eliminar ?</p>
+            <button class="delete__button button">Aceptar</button>
+            <span class="close__button" title="Cerrar"><i class="fa-solid fa-xmark"></i></span>
+        </div>
+    `
+
+    windowDelete.style.top = `${top}px`
+
+    return windowDelete;
 }

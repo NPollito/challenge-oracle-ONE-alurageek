@@ -46,11 +46,6 @@
   color: var(--color-secondary);
 }
 
-.form__button--size {
-  opacity: 0.5;
-}
-
-/* mensaje de exito */
 .alertSucces {
   position: relative;
   top: -13px;
