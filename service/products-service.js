@@ -1,7 +1,7 @@
 // método GET
 const categoryList = () => {
 
-    return fetch('http://localhost:3000/categories').then(answer => {
+    return fetch('https://json-test-one.vercel.app/categories').then(answer => {
 
         return answer.json()
     });
@@ -10,7 +10,7 @@ const categoryList = () => {
 
 const productList = () => {
     
-    return fetch('http://localhost:3000/products').then(answer => {
+    return fetch('https://json-test-one.vercel.app/products').then(answer => {
         
         return answer.json()
     });
@@ -18,7 +18,7 @@ const productList = () => {
 
 const seeProduct = (id) => {
     
-    return fetch(`http://localhost:3000/products/${id}`).then(answer => {
+    return fetch(`https://json-test-one.vercel.app/products/${id}`).then(answer => {
         
         return answer.json()
     });
@@ -26,7 +26,7 @@ const seeProduct = (id) => {
 
 const sixProducts = (id) => {
 
-    return fetch(`http://localhost:3000/categories/${id}/products?_limit=6`).then(answer => {
+    return fetch(`https://json-test-one.vercel.app/categories/${id}/products?_limit=6`).then(answer => {
 
         return answer.json()
     });
@@ -34,7 +34,7 @@ const sixProducts = (id) => {
 
 const createProduct = (image, title, price, details, categoryId) => {
     
-    return fetch('http://localhost:3000/products', {
+    return fetch('https://json-test-one.vercel.app/products', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -47,14 +47,14 @@ const createProduct = (image, title, price, details, categoryId) => {
 
 const deleteProduct = (id) => {
 
-    return fetch(`http://localhost:3000/products/${id}`, {
+    return fetch(`https://json-test-one.vercel.app/products/${id}`, {
         method: 'DELETE',
     })
 };
 
 const updateProduct = (id, image, title, details, price, categoryId) => {
 
-    return fetch(`http://localhost:3000/products/${id}`, {
+    return fetch(`https://json-test-one.vercel.app/products/${id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'

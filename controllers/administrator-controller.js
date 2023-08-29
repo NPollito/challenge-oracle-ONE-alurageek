@@ -57,6 +57,7 @@ function cardHTML(image, title, price, id) {
              .then(() => {
                 windowAlert.removeChild(deleteAlert);
                 windowAlert.style.overflow = "scroll"
+                window.location.href = "/screens/administrator.html"
               })
              .catch(err => console.log(err))
         })
