@@ -1,4 +1,4 @@
-import { template } from "./js/template.js";
+import { template } from "./src/js/template.js";
 
 document.addEventListener('DOMContentLoaded', function() {
 

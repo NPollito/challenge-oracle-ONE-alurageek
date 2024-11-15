@@ -13,7 +13,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./assets/css/base/base.css" />
+    <link rel="stylesheet" href="./src/assets/css/base/base.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -23,15 +23,15 @@
         <!-- mostrar y ocultar input para buscar -->
         <input type="checkbox" id="header__checked" />
 
-        <a href="../index.html" class="header__logo"
+        <a href="#" class="header__logo"
           ><img
-            src="../assets/images/Logo.svg"
+            src="../src/assets/images/Logo.svg"
             alt="logo"
             class="header__image"
         /></a>
 
         <div class="header__login">
-          <a href="./screens/login.html" class="header__cta button">Acceso</a>
+          <a href="./src/screens/login.html" class="header__cta button">Acceso</a>
         </div>
 
         <div class="header__search">
@@ -44,7 +44,7 @@
           </div>
           <label for="header__checked" class="search__label" title="Buscar">
             <img
-              src="../assets/images/Icone.svg"
+              src="../src/assets/images/Icone.svg"
               alt="icon-search disabled"
               class="search__icon"
             />
@@ -62,7 +62,7 @@
               Productos seleccionados con 33% de descuento
             </p>
             <a
-              href="./screens/see-everything.html?id=1"
+              href="./src/screens/see-everything.html?id=1"
               class="banner__cta button"
               >Ver consolas</a
             >
@@ -82,13 +82,13 @@
             <div class="cards__container">
               <div class="card">
                 <img
-                  src="./assets/images/unsplash_6FDXGY9J6y4.png"
+                  src="./src/assets/images/unsplash_6FDXGY9J6y4.png"
                   alt=""
                   class="card__image"
                 />
                 <p class="card__title">Producto</p>
                 <p class="card__price">60.00</p>
-                <a href="./screens/product.html" class="card__cta"
+                <a href="#" class="card__cta"
                   >Ver producto</a
                 >
               </div>
@@ -103,7 +103,7 @@
     <footer class="footer">
       <section class="footer__container container">
         <div class="links__container">
-          <img src="./assets/images/Logo.svg" alt="logo" class="link__logo" />
+          <img src="./src/assets/images/Logo.svg" alt="logo" class="link__logo" />
           <nav class="nav">
             <ul class="nav__ul">
               <li class="nav__list"><a href="#">Quienes somos</a></li>
@@ -159,6 +159,6 @@
     </aside>
 
     <script type="module" src="./main.js"></script>
-    <script type="module" src="./controllers/products-controller.js"></script>
+    <script type="module" src="./src/controllers/products-controller.js"></script>
   </body>
 </html>

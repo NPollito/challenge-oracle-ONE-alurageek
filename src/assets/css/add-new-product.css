@@ -1,0 +1,79 @@
+/*=============== header */
+.header__cta {
+  width: 166px;
+}
+
+/*=============== main */
+
+.main {
+  background-color: var(--color-background);
+}
+
+.main__container {
+  min-width: 300px;
+}
+
+.form__title--size {
+  font-size: 1.375rem;
+}
+
+.form--size {
+  margin: 0;
+  padding: 25px 0;
+}
+
+.form__button--size {
+  width: 100%;
+}
+
+/* form options */
+
+.form__label--select {
+  font-size: 1.1rem;
+  color: var(--color-secondary);
+  margin-right: 10px;
+}
+
+.form__group select {
+  color: var(--color-placeholder);
+  height: 35px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--color-secondary);
+}
+
+.form__group option {
+  color: var(--color-secondary);
+}
+
+.form__button--size {
+  opacity: 0.5;
+}
+
+/* mensaje de exito */
+.alertSucces {
+  position: relative;
+  top: -13px;
+  width: 100%;
+  line-height: 40px;
+  background: #398a39;
+}
+
+/* media queries */
+
+@media screen and (min-width: 700px) {
+  .form {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .form--size {
+    padding: 70px 0;
+    width: 50%;
+  }
+
+  .form__title--size {
+    font-size: 2rem;
+  }
+}

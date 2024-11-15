@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Product</title>
+
+    <!-- links cdn-fontawesome y styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../assets/css/base/base.css" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../assets/css/add-new-product.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <section class="header__container container">
+        <!-- mostrar y ocultar input para buscar -->
+        <input type="checkbox" id="header__checked" />
+
+        <a href="../index.html" class="header__logo"
+          ><img
+            src="../assets/images/Logo.svg"
+            alt="logo"
+            class="header__image"
+        /></a>
+
+        <div class="header__login">
+          <a href="./administrator.html" class="header__cta button"
+            >Menú Administrador</a
+          >
+        </div>
+
+        <div class="header__search">
+          <div class="search hidden">
+            <input
+              type="text"
+              class="search__input"
+              placeholder="¿Qué deseas buscar?"
+            />
+          </div>
+          <label for="header__checked" class="search__label" title="Buscar">
+            <img
+              src="../assets/images/Icone.svg"
+              alt="icon-search disabled"
+              class="search__icon"
+            />
+          </label>
+        </div>
+      </section>
+    </header>
+
+    <main class="main">
+      <section class="main__container container">
+        <form class="form form--size">
+          <h3 class="form__title form__title--size">Agregar nuevo producto</h3>
+          <div class="form__container">
+            <div class="form__group">
+              <input
+                type="text"
+                id="url-image"
+                class="form__input"
+                placeholder=" "
+                name="Url"
+                value="https://picsum.photos/200/300?random=100"
+              />
+              <label for="url-image" class="form__label"
+                >URL de la imagen</label
+              >
+              <span class="form__line"></span>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label--select" for="category"
+                >Categoría:</label
+              >
+              <select id="category" name="Categoria">
+                <option value="0">-- Selecciona una categoría --</option>
+                <option value="1">Star ward</option>
+                <option value="2">Consolas</option>
+                <option value="3">Otros</option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <input
+                type="text"
+                id="nom-product"
+                class="form__input"
+                name="Nombre"
+                placeholder=" "
+              />
+              <label for="nom-product" class="form__label"
+                >Nombre del producto</label
+              >
+              <span class="form__line"></span>
+            </div>
+            <div class="form__group">
+              <input
+                type="number"
+                id="price"
+                class="form__input"
+                name="Precio"
+                placeholder=" "
+              />
+              <label for="price" class="form__label">Precio del producto</label>
+              <span class="form__line"></span>
+            </div>
+            <div class="form__group">
+              <textarea
+                id="description"
+                class="form__input form__input--textarea"
+                name="Descripcion"
+                placeholder=" "
+              ></textarea>
+              <label for="description" class="form__label"
+                >Descripción del producto</label
+              >
+              <span class="form__line"></span>
+            </div>
+            <input
+              type="submit"
+              class="form__button form__button--size button"
+              value="Agregar Producto"
+              disabled
+            />
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"
+      integrity="sha512-UNM1njAgOFUa74Z0bADwAq8gbTcqZC8Ej4xPSzpnh0l6KMevwvkBvbldF9uR++qKeJ+MOZHRjV1HZjoRvjDfNQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="module"
+      src="../controllers/addProduct-controller.js"
+    ></script>
+    <script type="module" src="../js/validate-form.js"></script>
+  </body>
+</html>

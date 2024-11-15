@@ -168,7 +168,7 @@
   width: 100%;
   min-width: 300px;
   height: 192px;
-  background-image: url(./assets/images/hero.webp);
+  background-image: url(./src/assets/images/hero.webp);
   background-position: center;
   background-size: cover;
 }
