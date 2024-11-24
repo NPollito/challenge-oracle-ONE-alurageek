@@ -5,6 +5,10 @@ html {
   font-size: var(--font-raleway);
 }
 
+li {
+  list-style: none;
+}
+
 .container {
   width: 90%;
   margin: 0 auto;
@@ -12,12 +16,9 @@ html {
   overflow: hidden;
 }
 
-.button {
+/* boton enlace */
+.button__link {
   font-family: var(--font-raleway);
-  color: var(--color-white);
-  background-color: var(--color-primary);
-  display: inline-block;
-  width: 133px;
   height: 40px;
   font-size: 0.875rem;
   font-weight: 600;
@@ -25,6 +26,21 @@ html {
   border: none;
   cursor: pointer;
 }
+
+.button__link--access {
+  color: var(--color-primary);
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-primary);
+  width: 133px;
+  transition-property: color, background-color;
+  transition-duration: .5s;
+  transition-timing-function: ease-in;
+}
+.button__link--access:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
 
 /* formulario */
 .form {

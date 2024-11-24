@@ -3,56 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alurageek</title>
-
-    <!-- links cdn-fontawesome y styles -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <title>Alurageek</title>    
     <link rel="stylesheet" href="./src/assets/css/base/base.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <header class="header">
-      <section class="header__container container">
-        <!-- mostrar y ocultar input para buscar -->
-        <input type="checkbox" id="header__checked" />
+    <header class="header container">
+      
+      <img src="../src/assets/icons/logo.svg" alt="logo" class="header__logo" title="Inicio"/>
+      
+      <div class="button button--config">
+        <button class="button__link button__link--access">Acceso</button>
+      </div>
+      
+      <!-- input checkbox para activar y desactivar el buscador -->
+      <input type="checkbox" id="search__checked">
 
-        <a href="#" class="header__logo"
-          ><img
-            src="../src/assets/images/Logo.svg"
-            alt="logo"
-            class="header__image"
-        /></a>
-
-        <div class="header__login">
-          <a href="./src/screens/login.html" class="header__cta button">Acceso</a>
-        </div>
-
-        <div class="header__search">
-          <div class="search hidden">
-            <input
-              type="text"
-              class="search__input"
-              placeholder="¿Qué deseas buscar?"
-            />
-          </div>
-          <label for="header__checked" class="search__label" title="Buscar">
-            <img
-              src="../src/assets/images/Icone.svg"
-              alt="icon-search disabled"
-              class="search__icon"
-            />
-          </label>
-        </div>
-      </section>
+      <div class="search">
+        <ul class="search__container">
+          <li>
+            <label for="search__checked">
+              <img src="../src/assets/icons/arrow_back.svg" class="search__back" alt="Icono atras" title="Atras"/>
+            </label>
+          </li>
+          <li class="input input--color">
+            <input type="text" class="input__search" placeholder="Buscar">
+            <span class="input__closed" title="Borrar Todo"></span>
+          </li>
+        </ul>
+        <div class="search__result"></div>
+      </div>
+      
+      <label for="search__checked" class="input input--config">
+        <input type="text" class="input__search input__search--config" placeholder="¿Qué deseas Buscar?">
+        <img src="../src/assets/icons/shared.svg" alt="Icono de busqueda" title="Buscar"/>
+      </label>
     </header>
-
+    
     <main class="main">
       <section class="banner">
         <div class="banner__container container">
@@ -154,8 +142,7 @@
     <aside class="aside">
       <p>Nilton pv</p>
       <a href="https://github.com/NPollito" target="_blank"
-        ><i class="fa-brands fa-github"></i
-      ></a>
+        ><img class="fa-brands fa-github" src="./src/assets/icons/github.svg"></a>
     </aside>
 
     <script type="module" src="./main.js"></script>

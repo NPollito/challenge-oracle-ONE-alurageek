@@ -1,96 +1,155 @@
 /*==================== header */
 .header {
-  width: 100%;
   height: 72px;
-  min-width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.header__container {
-  height: 72px;
+.header__logo {
+  width: 100px;
+  height: 28px;
+  cursor: pointer;
+}
+
+/* Busqueda */
+input[type="checkbox"] {
+  display: none;
+}
+
+.search {
+  background-color: var(--color-secondary);
+  position: fixed;
+  top: 0;
+  left: calc(100% - 0px);
+  width: 100%;
+  height: 100%;
+  padding: 20px 10px;
+  transition: all .3s ease-in-out;
+  z-index: 10;
+}
+
+.search__container {
+  padding: 0;
+
+  display: flex;
+}
+
+.search__back {
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+
+.input {
+  width: 100%;
+  padding: 0 7px;
+  border-radius: 20px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#header__checked {
-  display: none;
-}
-
-.header__image {
-  width: 100px;
-  height: 28px;
-}
-
-.header__cta {
-  color: var(--color-primary);
-  background-color: var(--color-white);
-  border: 1px solid var(--color-primary);
-  line-height: 40px;
-}
-.header__cta:hover {
-  color: var(--color-white);
-  background-color: var(--color-primary);
-}
-
-/* search */
-.header__search {
-  position: relative;
-  height: 72px;
-  padding-left: 8px;
-}
-
-.search {
-  background-color: var(--color-background);
-  position: relative;
-  top: 15px;
-  /* width: 272px; */
-  height: 40px;
-  border-radius: 20px;
-
-  display: flex;
-  align-items: center;
-}
-
-.hidden {
-  display: none;
-}
-
-.search__input {
-  color: var(--color-placeholder);
-  width: 86%;
-  padding-left: 10px;
+.input__search {
+  color: var(--color-secondary);
+  width: 90%;
   background-color: transparent;
   border: none;
   outline: none;
 }
-.search__input::placeholder {
+
+.input__search::placeholder {
   color: var(--color-placeholder);
   font-size: 0.875rem;
+  font-weight: bold;
 }
 
-.search__label {
-  position: absolute;
-  top: 24px;
-  right: 5px;
+.input__closed {
+  background-color: var(--color-secondary);
+  display: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+.input__closed::before {
+  content: "x";
+  color: var(--color-white);
+  display: block;
+  font-family: sans-serif;
+  font-size: .8rem;
 }
 
-.search__icon {
-  width: 24px;
-  height: 24px;
+.input img {
   cursor: pointer;
 }
 
-/* pseudo clase :checked para activar y desactivar input buscar*/
-#header__checked:checked ~ * .search {
-  display: flex;
+/* pseudo clase checked para activar y desactivar input buscar*/
+#search__checked:checked ~ .search {
+  left: 0;
 }
-#header__checked:checked ~ * .header__cta {
+
+.input--config {
+  width: 25px;
+  height: 40px;
+}
+
+.input--color {
+  background-color: var(--color-background);
+}
+
+.input__search--config {
   display: none;
 }
 
-.form__button {
-  opacity: 0.5;
+.input__search--config::placeholder {
+  color: var(--color-placeholder);
+  font-weight: 400;
+}
+
+/* media queries */
+@media screen and (min-width: 700px) {
+
+  .header__logo {
+    margin-right: 15px;
+  }
+  
+  .search {
+    display: none;
+  }
+
+  /*cambiar orden del button*/
+  .button--config {
+    order: 1;
+    flex-grow: 1;
+    text-align: end;
+  }
+
+  .input--config {
+    background-color: var(--color-background);
+    width: 272px;
+  } 
+
+  .input__search--config {
+    display: block;
+    padding-left: 8px;
+  }
+  .input img {
+    cursor: auto;
+  }
+  
+}
+
+@media screen and (min-width: 1100px) {
+  .header__logo {
+    width: 176px;
+    height: 50px;
+  }
+
+  .input--config {
+    width: 393px;
+  }
 }
 
 /*==================== aside */
@@ -116,48 +175,6 @@
 }
 
 /* media queries */
-
-@media screen and (min-width: 700px) {
-  .hidden {
-    display: flex;
-  }
-
-  .header__logo {
-    margin-right: 20px;
-  }
-
-  .header__login {
-    order: 1;
-    flex-grow: 1;
-
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .header__search {
-    width: 272px;
-    padding-left: 0;
-  }
-
-  .disabled {
-    display: none;
-  }
-
-  #header__checked:checked ~ * .header__cta {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 1100px) {
-  .header__image {
-    width: 176px;
-    height: 50px;
-  }
-
-  .header__search {
-    width: 393px;
-  }
-}
 
 /*==================== main */
 
