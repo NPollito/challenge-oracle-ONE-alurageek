@@ -41,9 +41,15 @@ li {
   color: var(--color-white);
 }
 
+.button__link--consoles {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  width: 118px;
+}
+
 
 /* formulario */
-.form {
+/* .form {
   position: relative;
 }
 
@@ -107,7 +113,7 @@ li {
 .form__input:focus ~ .form__line,
 .form__input:not(:placeholder-shown) + .form__line {
   transform: scale(1);
-}
+} */
 
 /* spinkit */
 .sk-circle {

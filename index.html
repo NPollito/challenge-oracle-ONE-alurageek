@@ -44,16 +44,12 @@
     <main class="main">
       <section class="banner">
         <div class="banner__container container">
-          <div class="banner__text">
-            <h1 class="banner__title">Agosto Promocional</h1>
+          <div class="banner__texts">
+            <h1 class="banner__title">Diciembre Promocional</h1>
             <p class="banner__paragraph">
               Productos seleccionados con 33% de descuento
             </p>
-            <a
-              href="./src/screens/see-everything.html?id=1"
-              class="banner__cta button"
-              >Ver consolas</a
-            >
+            <button class="button__link button__link--consoles">Ver consolas</button>
           </div>
         </div>
       </section>
@@ -90,21 +86,21 @@
 
     <footer class="footer">
       <section class="footer__container container">
-        <div class="links__container">
-          <img src="./src/assets/images/Logo.svg" alt="logo" class="link__logo" />
-          <nav class="nav">
-            <ul class="nav__ul">
-              <li class="nav__list"><a href="#">Quienes somos</a></li>
-              <li class="nav__list"><a href="#">Politíca de privacidad</a></li>
-              <li class="nav__list"><a href="#">Programa de fidelidad</a></li>
-              <li class="nav__list"><a href="#">Nuestras tiendas</a></li>
-              <li class="nav__list"><a href="#">quiero ser franquiciado</a></li>
-              <li class="nav__list"><a href="#">Anuncie aquí</a></li>
+        <div class="footer__links">
+          <img src="./src/assets/icons/Logo.svg" alt="logo" class="footer__logo" />
+          <nav class="footer__nav">
+            <ul class="footer__uls">
+              <li class="footer__list"><a href="#">Quienes somos</a></li>
+              <li class="footer__list"><a href="#">Politíca de privacidad</a></li>
+              <li class="footer__list"><a href="#">Programa de fidelidad</a></li>
+              <li class="footer__list"><a href="#">Nuestras tiendas</a></li>
+              <li class="footer__list"><a href="#">quiero ser franquiciado</a></li>
+              <li class="footer__list"><a href="#">Anuncie aquí</a></li>
             </ul>
           </nav>
         </div>
 
-        <form class="form">
+        <form class="form form--config-footer">
           <h3 class="form__title">Hable con nosotros</h3>
           <div class="form__container">
             <div class="form__group">
@@ -130,7 +126,7 @@
             </div>
             <input
               type="submit"
-              class="form__button button"
+              class="button__link button__link--send"
               value="Enviar mensaje"
               disabled
             />
@@ -141,8 +137,9 @@
 
     <aside class="aside">
       <p>Nilton pv</p>
-      <a href="https://github.com/NPollito" target="_blank"
-        ><img class="fa-brands fa-github" src="./src/assets/icons/github.svg"></a>
+      <a href="https://github.com/NPollito" target="_blank">
+        <img src="./src/assets/icons/github.svg" alt="logo github">
+      </a>
     </aside>
 
     <script type="module" src="./main.js"></script>
