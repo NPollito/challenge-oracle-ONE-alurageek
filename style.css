@@ -108,7 +108,6 @@ input[type="checkbox"] {
   font-weight: 400;
 }
 
-/* media queries */
 @media screen and (min-width: 700px) {
 
   .header__logo {
@@ -263,8 +262,6 @@ input[type="checkbox"] {
   text-align: center;
 }
 
-/* section cards */
-
 .cards {
   width: 100%;
   margin-top: 10px;
@@ -313,10 +310,6 @@ input[type="checkbox"] {
   color: var(--color-secondary);
 }
 
-/* media queries */
-
-
-
 @media screen and (min-width: 1100px) {
   /* section products */
   .products__container {
@@ -341,6 +334,238 @@ input[type="checkbox"] {
     margin-bottom: 40px;
   }
 }
+
+/* section login */
+
+.login {
+  background-color: var(--color-background);
+  width: 100%;
+  min-width: 300px;
+  height: 90vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 270px;
+}
+
+.form__title {
+  font-family: var(--font-raleway);
+  color: var(--color-secondary);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.form__container {
+  margin-top: 20px;
+  display: grid;
+  gap: 25px;
+}
+
+.form__group {
+  position: relative;
+  padding: 10px 0 0;
+}
+
+.form__input {
+  font-family: var(--font-raleway);
+  color: var(--color-secondary);
+  border: none;
+  border-bottom: 2px solid var(--color-placeholder);
+  width: 100%;
+  padding: 7px 0;
+  font-size: 1.3rem;
+  background: transparent;
+  outline: none;
+  /* transition: border-color .2s;  */
+}
+
+.form__input::placeholder {
+  color: transparent;
+}
+
+.form__input:placeholder-shown ~ .form__label{
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  color: var(--color-placeholder);
+  position: absolute;
+  top: 0;
+  display: block;
+  font-size: 1rem;
+  transition: .2s;
+}
+
+.form__input:focus ~ .form__label {
+  color: var(--color-primary);
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: .2s;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.form__input:focus {
+  padding-bottom: 6px;
+  font-weight: 600;
+  border-width: 3px;
+}
+
+.form__line {
+  background-color: var(--color-primary);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: scale(0);
+  transform: left bottom;
+  transition: transform 0.4s;
+}
+
+.form__input:focus ~ .form__line,
+.form__input:not(:placeholder-shown) + .form__line {
+  transform: scale(1);
+}
+
+.button__link--login {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  margin: 0 auto;
+  width: 133px;
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 1100px) {
+  .login {
+    height: 85vh;
+  }
+
+  .form {
+    width: 40%;
+  }
+
+  .form__title {
+    font-size: 1.5625rem;
+  }
+
+  .button__link--login {
+    width: 100%;
+    height: 62px;
+    font-size: 1.125rem;
+  }
+}
+
+/* section agregar nuevo producto */
+
+.add-new-product {
+  background-color: var(--color-background); 
+  min-width: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__config--section {
+  width: 80%;
+  padding: 25px 0;
+}
+
+.form__title--section {
+  font-size: 1.375rem;
+  text-align: start;
+}
+
+.button__link--addProduct {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  opacity: .5;
+}
+
+/* drag and drop */
+.drag-drop {
+  font-family: var(--font-raleway);
+  border: 2px dashed var(--color-placeholder);
+  padding: 20px 5px;
+  text-align: center;
+}
+
+.drag-drop.active {
+  border-color: var(--color-primary);
+  background-color: var(--color-placeholder);
+}
+
+.drag-drop__title {
+  font-family: var(--font-raleway);
+  color: var(--color-secondary);
+}
+
+.drag-drop__image-container {
+  display: inline-block;
+  position: relative;
+}
+
+.drag-drop__image {
+  width: 176px;
+  height: 174px;
+  object-fit: cover;
+}
+
+.drag-drop__close {
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 2px 7px;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.drag-drop__close:hover {
+  color: red;
+}
+
+.drag-drop__details-image {
+  text-align: start;
+}
+
+.button__link--load {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  margin-top: 15px;
+  width: 140px;
+}
+
+/* form options */
+
+.form__label--select {
+  position: static;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 1100px) {
+  .form__config--section {
+    width: 40%;
+  }
+
+  .form__title--section {
+    padding-top: 10px;
+    font-size: 2rem;
+  }
+}
+
 
 /*==================== footer */
 
@@ -386,77 +611,17 @@ input[type="checkbox"] {
   margin-bottom: 10px;
 }
 
-/* form */
-
-.form {
-  position: relative;
-}
-
-.form__title {
-  font-family: var(--font-raleway);
-  color: var(--color-secondary);
-  font-size: 1rem;
-}
-
-.form__container {
-  margin-top: 20px;
-  display: grid;
-  gap: 25px;
-}
-
-.form__group {
-  position: relative;
-}
-
-.form__input {
-  width: 100%;
-  background: var(--color-white);
-  color: var(--color-secondary);
-  font-size: 1rem;
-  padding: 0.6em 0.3em;
-  border: none;
-  outline: none;
-  font-family: "Raleway", sans-serif;
-  border-bottom: 1px solid var(--color-secondary);
-}
-
-.form__input:focus + .form__label,
-.form__input:not(:placeholder-shown) + .form__label {
-  color: var(--color-primary);
-  transform: translateY(-12px) scale(0.7);
-  transform-origin: left top;
-}
-
-.form__label {
-  color: var(--color-placeholder);
-  position: absolute;
-  top: 0;
-  left: 5px;
-  cursor: text;
-  transform: translateY(10px);
-  transition: transform 0.5s, color 0.3s;
-}
-
-.form__line {
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: var(--color-primary);
-  transform: scale(0);
-  transform: left bottom;
-  transition: transform 0.4s;
-}
-
-.form__input:focus ~ .form__line,
-.form__input:not(:placeholder-shown) + .form__line {
-  transform: scale(1);
-}
+/* form config*/
 
 .form--config-footer {
+  width: 100%;
   margin-top: 20px;
   min-width: 300px;
+}
+
+.form__title--config {
+  text-align: start;
+  font-size: 1rem;
 }
 
 .form__input--textarea {
@@ -472,7 +637,8 @@ input[type="checkbox"] {
 .button__link--send {
   color: var(--color-white);
   background-color: var(--color-primary);
-  width: 118px;
+  width: 133px;
+  opacity: 0.5;
 }
 
 @media screen and (min-width: 700px) {
@@ -491,7 +657,7 @@ input[type="checkbox"] {
   }
 
   /* form */
-  .form {
+  .form--config-footer {
     width: 65%;
     margin-top: 0;
   }
@@ -512,7 +678,7 @@ input[type="checkbox"] {
     flex-basis: 50%;
   }
 
-  .footer__ul {
+  .footer__uls {
     margin-top: 0;
   }
 
