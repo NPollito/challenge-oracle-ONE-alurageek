@@ -35,7 +35,7 @@
         <div class="search__result"></div>
       </div>
       
-      <label for="search__checked" class="input input--config" style="display: none;">
+      <label for="search__checked" class="input input--config">
         <input type="text" class="input__search input__search--config" placeholder="¿Qué deseas Buscar?">
         <img src="../src/assets/icons/shared.svg" alt="Icono de busqueda" title="Buscar"/>
       </label>
@@ -54,33 +54,47 @@
         </div>
       </section>
 
-      <section class="products__container container" style="display: none;">
-        <template class="products">
+      <section class="products__container container">
+        <div class="products">
           <section class="products__texts">
             <h2 class="products__title">Star Wars</h2>
-            <a href="#" class="products__link"
-              >Ver todo <i class="fa-solid fa-arrow-right"></i
-            ></a>
+            <span class="products__show">Ver todo <img src="./src/assets/icons/arrow_back.svg"></span>
           </section>
           <section class="cards">
             <div class="cards__container">
               <div class="card">
-                <img
-                  src="./src/assets/images/unsplash_6FDXGY9J6y4.png"
-                  alt=""
-                  class="card__image"
-                />
-                <p class="card__title">Producto</p>
-                <p class="card__price">60.00</p>
-                <a href="#" class="card__cta"
-                  >Ver producto</a
-                >
+                <img src="./src/assets/images/unsplash_6FDXGY9J6y4.png" class="card__image"/>
+                <div class="card__details">
+                  <p class="card__title">Producto</p>
+                  <p class="card__price">S/. 60.00</p>
+                  <button class="button__link button__link--product">Ver producto</button>
+                </div>
               </div>
             </div>
           </section>
-        </template>
+        </div>
+      </section >
 
-        <!-- <h2 class="products__message">No hay productos para mostrar</h2> -->
+      <section class="product__details" style="display: none;">
+        <section class="product">
+          <picture class="product__picture">
+            <img
+              src="./src/assets/images/unsplash_6FDXGY9J6y4.jpg"
+              alt=""
+              class="product__image"
+            />
+          </picture>
+          <div class="product__texts">
+            <h2 class="product__title">Producto xyz</h2>
+            <p class="product__price">$60.00</p>
+            <p class="product__details">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
+              tempora commodi similique voluptatum id animi suscipit velit rem,
+              dolores, iste temporibus et vitae, quos quasi modi nostrum totam
+              reiciendis necessitatibus.
+            </p>
+          </div>
+        </section>
       </section>
 
       <section class="login" style="display: none;">
@@ -123,7 +137,7 @@
         </form>
       </section>
 
-      <section class="add-new-product">
+      <section class="add-new-product" style="display: none;">
         <form class="form form__config--section">
           <h3 class="form__title form__title--section">Agregar nuevo producto</h3>
           <div class="form__container">
@@ -260,6 +274,6 @@
     </aside>
 
     <script type="module" src="./main.js"></script>
-    <script type="module" src="./src/controllers/products-controller.js"></script>
+    <!-- <script type="module" src="./src/controllers/products-controller.js"></script> -->
   </body>
 </html>

@@ -166,7 +166,6 @@ input[type="checkbox"] {
 }
 
 .banner__texts {
-  font-family: var(--font-raleway);
   position: absolute;
   bottom: 20px;
   /* height: 98px; */
@@ -218,7 +217,6 @@ input[type="checkbox"] {
 /* section products */
 
 .products__container {
-  font-family: var(--font-raleway);
   min-width: 300px;
   padding-top: 20px;
 }
@@ -230,8 +228,10 @@ input[type="checkbox"] {
 
 .products__texts {
   height: 26px;
+
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .products__title {
@@ -239,28 +239,32 @@ input[type="checkbox"] {
   font-size: 1.375rem;
 }
 
-.products__link {
+.products__show {
   color: var(--color-primary);
   font-size: 0.875rem;
   font-weight: bold;
-
+  cursor: pointer;
+  transition: color .5s ease;
+  
   display: flex;
   align-items: center;
-}
-.products__link:hover {
+} 
+.products__show:hover {
   color: var(--color-secondary);
 }
 
-.products__link i {
-  font-size: 1.2rem;
-  padding-left: 5px;
+.products__show img {
+  transition: all .5s ease;
+}
+.products__show:hover > img {
+  filter: grayscale(1);
 }
 
-.products__message {
+/* .products__message {
   color: var(--color-secondary);
   padding-bottom: 20px;
   text-align: center;
-}
+} */
 
 .cards {
   width: 100%;
@@ -268,46 +272,52 @@ input[type="checkbox"] {
 }
 
 .cards__container {
-  font-family: var(--font-raleway);
   color: var(--color-secondary);
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(162px, 1fr));
   gap: 20px;
-  justify-items: center;
 }
 
 .card {
-  width: 156px;
+  box-shadow: 0 0 5px var(--color-secondary);
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .card__image {
   width: 100%;
-  height: 200px;
+  height: 158px;
+  object-fit: cover;
 }
 
-.card__title {
-  margin-top: 5px;
-  font-size: 1rem;
-}
+.card__details {
+  background-color: var(--color-white);
+  position: relative;
+  top: -13px;
+  padding: 10px 5px 0;
+  border-radius: 15px;
 
-.card__price,
-.card__cta {
-  font-size: 1.0625rem;
-  font-weight: bold;
 }
 
 .card__price {
   margin-top: 6px;
+  font-size: 1.0625rem;
+  font-weight: bold;
 }
 
-.card__cta {
-  display: inline-block;
-  margin-top: 6px;
-  color: var(--color-primary);
+.button__link--product {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  margin-top: 8px;
+  width: 120px;
+  height: 30px;
+  border-radius: 10px;
+  transition: background-color .5s ease-out;
 }
-.card__cta:hover {
-  color: var(--color-secondary);
+.button__link--product:hover {
+  background-color: var(--color-secondary);
 }
 
 @media screen and (min-width: 1100px) {
@@ -332,6 +342,107 @@ input[type="checkbox"] {
 
   .products {
     margin-bottom: 40px;
+  }
+
+  .products__show {
+    font-size: 1rem;
+  }
+}
+
+/* section products details */
+
+.product__details {
+  background-color: var(--color-background);
+  padding-bottom: 40px;
+  min-width: 300px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+}
+
+.product__picture {
+  margin-bottom: 15px;
+  width: 100%;
+  height: 192px;
+  overflow: hidden;
+}
+
+.product__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product__texts {
+  font-family: var(--font-raleway);
+  color: var(--color-secondary);
+  margin: 0 auto;
+  width: 90%;
+}
+
+.product__title {
+  margin-bottom: 10px;
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+
+.product__price {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.product__details {
+  font-size: 0.875rem;
+  word-wrap: break-word;
+}
+
+@media screen and (min-width: 700px) {
+  .product {
+    padding: 10px 0;
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .product__picture {
+    width: 40%;
+    height: 157px;
+  }
+
+  .product__texts {
+    width: 57%;
+    height: 157px;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .product {
+    padding: 20px 0;
+    max-width: 1100px;
+    align-items: center;
+  }
+
+  .product__picture {
+    width: 50%;
+    height: 403px;
+  }
+
+  .product__texts {
+    width: 48%;
+    height: 210px;
+    justify-content: center;
+  }
+
+  .product__title {
+    font-size: 3.25rem;
   }
 }
 
