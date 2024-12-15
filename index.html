@@ -1,308 +1,258 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alurageek</title>    
-    <link rel="stylesheet" href="./src/assets/css/base/base.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <header class="header container">
-      
-      <img src="../src/assets/icons/logo.svg" alt="logo" class="header__logo" title="Inicio"/>
-      
-      <div class="button button--config"">
-        <button class="button__link button__link--access">Acceso</button>
-      </div>
-      
-      <!-- input checkbox para activar y desactivar el buscador -->
-      <input type="checkbox" id="search__checked">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alurageek</title>
+  <link rel="stylesheet" href="./src/assets/css/base/base.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-      <div class="search">
-        <ul class="search__container">
-          <li>
-            <label for="search__checked">
-              <img src="../src/assets/icons/arrow_back.svg" class="search__back" alt="Icono atras" title="Atras"/>
-            </label>
-          </li>
-          <li class="input input--color">
-            <input type="text" class="input__search" placeholder="Buscar">
-            <span class="input__closed" title="Borrar Todo"></span>
-          </li>
-        </ul>
-        <div class="search__result"></div>
-      </div>
-      
-      <label for="search__checked" class="input input--config">
-        <input type="text" class="input__search input__search--config" placeholder="¿Qué deseas Buscar?">
-        <img src="../src/assets/icons/shared.svg" alt="Icono de busqueda" title="Buscar"/>
-      </label>
-    </header>
-    
-    <main class="main">
-      <section class="banner"">
-        <div class="banner__container container">
-          <div class="banner__texts">
-            <h1 class="banner__title">Diciembre Promocional</h1>
-            <p class="banner__paragraph">
-              Productos seleccionados con 33% de descuento
-            </p>
-            <button class="button__link button__link--consoles">Ver consolas</button>
-          </div>
+<body>
+  <header class="header container">
+
+    <img src="../src/assets/icons/logo.svg" alt="logo" class="header__logo" title="Inicio" />
+
+    <div class="button button--config">
+      <button class="button__link button__link--access">Acceso</button>
+    </div>
+
+    <!-- input checkbox para activar y desactivar el buscador -->
+    <input type="checkbox" id="search__checked">
+
+    <div class="search">
+      <ul class="search__container">
+        <li>
+          <label for="search__checked">
+            <img src="../src/assets/icons/arrow_back.svg" class="search__back" alt="Icono atras" title="Atras" />
+          </label>
+        </li>
+        <li class="input input--color">
+          <input type="text" class="input__search" placeholder="Buscar">
+          <span class="input__closed" title="Borrar Todo"></span>
+        </li>
+      </ul>
+      <div class="search__result"></div>
+    </div>
+
+    <label for="search__checked" class="input input--config">
+      <input type="text" class="input__search input__search--config" placeholder="¿Qué deseas Buscar?">
+      <img src="../src/assets/icons/shared.svg" alt="Icono de busqueda" title="Buscar" />
+    </label>
+  </header>
+
+  <main class="main">
+    <section class="banner">
+      <div class="banner__container container">
+        <div class="banner__texts">
+          <h1 class="banner__title">Diciembre Promocional</h1>
+          <p class="banner__paragraph">
+            Productos seleccionados con 33% de descuento
+          </p>
+          <button class="button__link button__link--consoles">Ver consolas</button>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="products__container container">
-        <div class="products">
-          <section class="products__texts">
-            <h2 class="products__title">Star Wars</h2>
-            <span class="products__show">Ver todo <img src="./src/assets/icons/arrow_back.svg"></span>
-          </section>
-          <section class="cards">
-            <div class="cards__container">
-              <div class="card">
-                <img src="./src/assets/images/unsplash_6FDXGY9J6y4.png" class="card__image"/>
-                <div class="card__details">
-                  <p class="card__title">Producto</p>
-                  <p class="card__price">S/. 60.00</p>
-                  <button class="button__link button__link--product">Ver producto</button>
-                </div>
+    <section class="products__container">
+      <div class="products container">
+        <section class="products__texts">
+          <h2 class="products__title">Star Wars</h2>
+          <span class="products__show">Ver todo <img src="./src/assets/icons/arrow_back.svg"></span>
+        </section>
+        <section class="cards">
+          <div class="cards__container">
+            <div class="card">
+              <img src="./src/assets/images/unsplash_6FDXGY9J6y4.png" class="card__image" />
+              <div class="card__details">
+                <p class="card__title">Producto</p>
+                <p class="card__price">S/. 60.00</p>
+                <button class="button__link button__link--product">Ver producto</button>
               </div>
             </div>
-          </section>
-        </div>
-      </section >
-
-      <section class="product__details" style="display: none;">
-        <section class="product">
-          <picture class="product__picture">
-            <img
-              src="./src/assets/images/unsplash_6FDXGY9J6y4.jpg"
-              alt=""
-              class="product__image"
-            />
-          </picture>
-          <div class="product__texts">
-            <h2 class="product__title">Producto xyz</h2>
-            <p class="product__price">$60.00</p>
-            <p class="product__details">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
-              tempora commodi similique voluptatum id animi suscipit velit rem,
-              dolores, iste temporibus et vitae, quos quasi modi nostrum totam
-              reiciendis necessitatibus.
-            </p>
           </div>
         </section>
-      </section>
+      </div>
+    </section>
 
-      <section class="login" style="display: none;">
-        <form class="form">
-          <h3 class="form__title">Iniciar Seción</h3>
-          <div class="form__container">
-            <div class="form__group">
-              <input
-                type="email"
-                id="email"
-                class="form__input"
-                name="Email"
-                placeholder=" "
-              />
-              <label for="email" class="form__label"
-                >Escriba su correo electronico</label
-              >
-              <span class="form__line"></span>
-            </div>
-            <div class="form__group">
-              <input
-                type="password"
-                id="pass"
-                class="form__input"
-                name="Contraseña"
-                placeholder=" "
-              />
-              <label for="pass" class="form__label"
-                >Escriba su contraseña</label
-              >
-              <span class="form__line"></span>
-            </div>
-            <input
-              type="submit"
-              class="button__link button__link--login"
-              value="Entrar"
-              disabled
-            />
-          </div>
-        </form>
-      </section>
-
-      <section class="administrator" style="display: none;">
-        <div class="administrator__products container">
-          <section class="administrator__texts">
-            <h2 class="administrator__title">Todos los productos</h2>
-            <button class="button__link button__link--createProduct">Agregar Producto</button>
-          </section>
-      
-          <section class="cards">
-            <div class="cards__container">
-              <div class="card">
-                <img src="./src/assets/images/unsplash_6FDXGY9J6y4.png" class="card__image"/>
-                <div class="card__details">
-                  <p class="card__title">Producto</p>
-                  <p class="card__price">S/. 60.00</p>
-                </div>
-                <div class="card__icons">
-                  <span id="edit" title="Editar" class="card__edit">
-                    <img src="./src/assets/icons/edit.svg" alt="Icono eliminar">
-                  </span>
-                  <span id="delete" title="Borrar" class="card__delete">
-                    <img src="./src/assets/icons/delete.svg" alt="Icono eliminar">
-                  </span>
-                </div>
-              </div>
-            </div>
-          </section>
+    <section class="product__details" style="display: none;">
+      <section class="product">
+        <picture class="product__picture">
+          <img src="./src/assets/images/unsplash_6FDXGY9J6y4.jpg" alt="" class="product__image" />
+        </picture>
+        <div class="product__texts">
+          <h2 class="product__title">Producto xyz</h2>
+          <p class="product__price">$60.00</p>
+          <p class="product__details">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
+            tempora commodi similique voluptatum id animi suscipit velit rem,
+            dolores, iste temporibus et vitae, quos quasi modi nostrum totam
+            reiciendis necessitatibus.
+          </p>
         </div>
       </section>
+      <section class="products container">
+        <h2 class="products__title">Productos Similares</h2>
 
-      <section class="add-new-product" style="display: none;">
-        <form class="form form__config--section">
-          <h3 class="form__title form__title--section">Agregar nuevo producto</h3>
-          <div class="form__container">
-            <div class="form__group drag-drop">
-              <input type="file" id="load-image" hidden>
+        <div class="cards">
+          <div class="cards__container">
+            <div class="card">
+              <img src="./src/assets/images/unsplash_6FDXGY9J6y4.png" class="card__image" />
+              <div class="card__details">
+                <p class="card__title">Producto</p>
+                <p class="card__price">S/. 60.00</p>
+                <button class="button__link button__link--product">Ver producto</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
 
-              <article class="drag-drop__details">
-                <h3 class="drag-drop__title">Arrastra y Suelta tu Imagen</h3>
-                <button class="button__link button__link--load">Cargar Imagen</button>
-              </article>
+    <section class="login" style="display: none;">
+      <form class="form">
+        <h3 class="form__title">Iniciar Seción</h3>
+        <div class="form__container">
+          <div class="form__group">
+            <input type="email" id="email" class="form__input" name="Email" placeholder=" " />
+            <label for="email" class="form__label">Correo electronico</label>
+            <span class="form__line"></span>
+          </div>
+          <div class="form__group">
+            <input type="password" id="pass" class="form__input" name="Contraseña" placeholder=" " />
+            <label for="pass" class="form__label">Contraseña</label>
+            <span class="form__line"></span>
+          </div>
+          <input type="submit" class="button__link button__link--login" value="Entrar" disabled />
+        </div>
+      </form>
+    </section>
 
-              <!-- <figure class="drag-drop__image-container">
+    <section class="administrator" style="display: none;">
+      <div class="administrator__products container">
+        <section class="administrator__texts">
+          <h2 class="administrator__title">Todos los productos</h2>
+          <button class="button__link button__link--createProduct">Agregar Producto</button>
+        </section>
+
+        <section class="cards">
+          <div class="cards__container">
+            <div class="card">
+              <img src="./src/assets/images/unsplash_6FDXGY9J6y4.png" class="card__image" />
+              <div class="card__details">
+                <p class="card__title">Producto</p>
+                <p class="card__price">S/. 60.00</p>
+              </div>
+              <div class="card__icons">
+                <span id="edit" title="Editar" class="card__edit">
+                  <img src="./src/assets/icons/edit.svg" alt="Icono eliminar">
+                </span>
+                <span id="delete" title="Borrar" class="card__delete">
+                  <img src="./src/assets/icons/delete.svg" alt="Icono eliminar">
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="add-new-product" style="display: none;">
+      <form class="form form__config--section">
+        <h3 class="form__title form__title--section">Agregar nuevo producto</h3>
+        <div class="form__container">
+          <div class="form__group drag-drop">
+            <input type="file" id="load-image" hidden>
+
+            <article class="drag-drop__details">
+              <h3 class="drag-drop__title">Arrastra y Suelta tu Imagen</h3>
+              <button class="button__link button__link--loadImage">Cargar Imagen</button>
+            </article>
+
+            <!-- <figure class="drag-drop__image-container">
                 <img src="./src/assets/images/unsplash_6FDXGY9J6y4.jpg" class="drag-drop__image" alt="imagen cargada">
                 <span class="drag-drop__close" title="Eliminar">x</span>
                 <figcaption class="drag-drop__details-image">detalles</figcaption>
               </figure> -->
-            </div>
-
-            <div class="form__group">
-              <label class="form__label form__label--select" for="category"
-                >Categoría:</label
-              >
-              <select id="category" name="categories" class="form__input form__input--select">
-                <option selected disabled>-- Seleccionar categoría --</option>
-                <option value="ST">Star ward</option>
-                <option value="CO">Consolas</option>
-                <option value="OT">Otros</option>
-              </select>
-            </div>
-
-            <div class="form__group">
-              <input
-                type="text"
-                id="nom-product"
-                class="form__input"
-                name="Nombre"
-                placeholder=" "
-              />
-              <label for="nom-product" class="form__label"
-                >Nombre del producto</label
-              >
-              <span class="form__line"></span>
-            </div>
-            <div class="form__group">
-              <input
-                type="number"
-                id="price"
-                class="form__input"
-                name="Precio"
-                placeholder=" "
-              />
-              <label for="price" class="form__label">Precio del producto</label>
-              <span class="form__line"></span>
-            </div>
-            <div class="form__group">
-              <textarea
-                id="description"
-                class="form__input form__input--textarea"
-                name="Descripcion"
-                placeholder=" "
-              ></textarea>
-              <label for="description" class="form__label"
-                >Descripción del producto</label
-              >
-              <span class="form__line"></span>
-            </div>
-            <input
-              type="submit"
-              class="button__link button__link--addProduct"
-              value="Agregar Producto"
-              disabled
-            />
           </div>
-        </form>
-      </section>
-    </main>
 
-    <footer class="footer">
-      <section class="footer__container container">
-        <div class="footer__links">
-          <img src="./src/assets/icons/Logo.svg" alt="logo" class="footer__logo" />
-          <nav class="footer__nav">
-            <ul class="footer__uls">
-              <li class="footer__list"><a href="#">Quienes somos</a></li>
-              <li class="footer__list"><a href="#">Politíca de privacidad</a></li>
-              <li class="footer__list"><a href="#">Programa de fidelidad</a></li>
-              <li class="footer__list"><a href="#">Nuestras tiendas</a></li>
-              <li class="footer__list"><a href="#">quiero ser franquiciado</a></li>
-              <li class="footer__list"><a href="#">Anuncie aquí</a></li>
-            </ul>
-          </nav>
+          <div class="form__group">
+            <label class="form__label form__label--select" for="category">Categoría:</label>
+            <select id="category" name="categories" class="form__input form__input--select">
+              <option selected disabled>-- Seleccionar categoría --</option>
+              <option value="ST">Star ward</option>
+              <option value="CO">Consolas</option>
+              <option value="OT">Otros</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <input type="text" id="nom-product" class="form__input" name="Nombre" placeholder=" " />
+            <label for="nom-product" class="form__label">Nombre del producto</label>
+            <span class="form__line"></span>
+          </div>
+          <div class="form__group">
+            <input type="number" id="price" class="form__input" name="Precio" placeholder=" " />
+            <label for="price" class="form__label">Precio del producto</label>
+            <span class="form__line"></span>
+          </div>
+          <div class="form__group">
+            <textarea id="description" class="form__input form__input--textarea" name="Descripcion"
+              placeholder=" "></textarea>
+            <label for="description" class="form__label">Descripción del producto</label>
+            <span class="form__line"></span>
+          </div>
+          <input type="submit" class="button__link button__link--addProduct" value="Agregar Producto" disabled />
         </div>
+      </form>
+    </section>
+  </main>
 
-        <form class="form form--config-footer">
-          <h3 class="form__title form__title--config">Hable con nosotros</h3>
-          <div class="form__container">
-            <div class="form__group">
-              <input
-                type="text"
-                id="name"
-                class="form__input"
-                placeholder=" "
-              />
-              <label for="name" class="form__label">Nombre</label>
-              <span class="form__line"></span>
-            </div>
-            <div class="form__group">
-              <textarea
-                id="message"
-                class="form__input form__input--textarea"
-                placeholder=" "
-              ></textarea>
-              <label for="message" class="form__label"
-                >Escribe tu mensaje</label
-              >
-              <span class="form__line"></span>
-            </div>
-            <input
-              type="submit"
-              class="button__link button__link--send"
-              value="Enviar mensaje"
-              disabled
-            />
+  <footer class="footer">
+    <section class="footer__container container">
+      <div class="footer__links">
+        <img src="./src/assets/icons/Logo.svg" alt="logo" class="footer__logo" />
+        <nav class="footer__nav">
+          <ul class="footer__uls">
+            <li class="footer__list"><a href="#">Quienes somos</a></li>
+            <li class="footer__list"><a href="#">Politíca de privacidad</a></li>
+            <li class="footer__list"><a href="#">Programa de fidelidad</a></li>
+            <li class="footer__list"><a href="#">Nuestras tiendas</a></li>
+            <li class="footer__list"><a href="#">quiero ser franquiciado</a></li>
+            <li class="footer__list"><a href="#">Anuncie aquí</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <form class="form form--config-footer">
+        <h3 class="form__title form__title--config">Hable con nosotros</h3>
+        <div class="form__container">
+          <div class="form__group">
+            <input type="text" id="name" class="form__input" placeholder=" " />
+            <label for="name" class="form__label">Nombre</label>
+            <span class="form__line"></span>
           </div>
-        </form>
-      </section>
-    </footer>
+          <div class="form__group">
+            <textarea id="message" class="form__input form__input--textarea" placeholder=" "></textarea>
+            <label for="message" class="form__label">Escribe tu mensaje</label>
+            <span class="form__line"></span>
+          </div>
+          <input type="submit" class="button__link button__link--sendMessage" value="Enviar mensaje" disabled />
+        </div>
+      </form>
+    </section>
+  </footer>
 
-    <aside class="aside">
-      <p>Nilton pv</p>
-      <a href="https://github.com/NPollito" target="_blank">
-        <img src="./src/assets/icons/github.svg" alt="logo github">
-      </a>
-    </aside>
+  <aside class="aside">
+    <p>Nilton pv</p>
+    <a href="https://github.com/NPollito" target="_blank">
+      <img src="./src/assets/icons/github.svg" alt="logo github">
+    </a>
+  </aside>
 
-    <script type="module" src="./main.js"></script>
-    <!-- <script type="module" src="./src/controllers/products-controller.js"></script> -->
-  </body>
+  <script type="module" src="./main.js"></script>
+  <!-- <script type="module" src="./src/controllers/products-controller.js"></script> -->
+</body>
+
 </html>
