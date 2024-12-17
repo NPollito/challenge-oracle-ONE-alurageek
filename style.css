@@ -234,6 +234,28 @@ input[type="checkbox"] {
   }
 }
 
+/* section products */
+.products {
+  min-width: 300px;
+  padding-top: 20px;
+}
+
+.products__container {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1100px) {
+
+  .products {
+    margin-bottom: 40px;
+  }
+
+  .products__link {
+    font-size: 1rem;
+  }
+}
+
+
 /* section products details */
 .product__details {
   background-color: var(--color-background);
