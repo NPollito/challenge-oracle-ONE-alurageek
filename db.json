@@ -1,204 +1,244 @@
 {
   "products": [
     {
-      "id": "1",
-      "image": "https://picsum.photos/200/300?random=1",
-      "title": "Star Wars",
-      "price": "128",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
+      "id": 1,
+      "image": "https://cdn.pixabay.com/photo/2017/08/19/02/06/f-16a-fighting-falcon-2657083_1280.jpg",
+      "title": "Millennium Falcon",
+      "price": "$199.99",
+      "details": "Una réplica detallada del icónico Millennium Falcon de Star Wars, ideal para coleccionistas y fans.",
       "categoryId": 0
     },
     {
-      "image": "https://picsum.photos/200/300?random=2",
-      "title": "Star Wars",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus mas ipson xd ",
-      "price": "78",
-      "categoryId": 0,
-      "id": "2"
-    },
-    {
-      "id": "3",
-      "image": "https://picsum.photos/200/300?random=3",
-      "title": "Consolas",
-      "price": "38",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
-      "categoryId": 1
-    },
-    {
-      "id": "4",
-      "image": "https://picsum.photos/200/300?random=4",
-      "title": "Consolas",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
-      "categoryId": 1
-    },
-    {
-      "id": "5",
-      "image": "https://picsum.photos/200/300?random=5",
-      "title": "Otros",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
+      "id": 24,
+      "image": "https://cdn.pixabay.com/photo/2021/08/03/08/06/woman-6518787_1280.jpg",
+      "title": "Nerf N-Strike Elite",
+      "price": "$29.99",
+      "details": "Una pistola Nerf de la serie Elite, con dardos de espuma y alcance mejorado.",
       "categoryId": 2
     },
     {
-      "id": "6",
-      "image": "https://picsum.photos/200/300?random=6",
-      "title": "Otros",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
+      "id": 21,
+      "image": "https://cdn.pixabay.com/photo/2021/10/20/09/58/lego-6725595_1280.jpg",
+      "title": "Lego City Police Station",
+      "price": "$99.99",
+      "details": "Un set de Lego de la estación de policía de la ciudad, completo con vehículos y mini figuras.",
       "categoryId": 2
     },
     {
-      "id": "7",
-      "image": "https://picsum.photos/200/300?random=7",
-      "title": "Otros",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
+      "id": 29,
+      "image": "https://cdn.pixabay.com/photo/2016/12/27/01/22/crayons-1933053_1280.jpg",
+      "title": "Crayola Inspiration Art Case",
+      "price": "$24.99",
+      "details": "Un estuche de arte de Crayola con una variedad de suministros para pintar y dibujar.",
       "categoryId": 2
     },
     {
-      "id": "8",
-      "image": "https://picsum.photos/200/300?random=8",
-      "title": "Star Wars",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
+      "id": 3,
+      "image": "https://cdn.pixabay.com/photo/2016/10/09/00/11/star-wars-1724895_960_720.jpg",
+      "title": "Chewbacca Plush Toy",
+      "price": "$24.99",
+      "details": "Un juguete de peluche de Chewbacca, perfecto para los pequeños fans de Star Wars.",
       "categoryId": 0
     },
     {
-      "id": "9",
-      "image": "https://picsum.photos/200/300?random=9",
-      "title": "Otros",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
+      "id": 8,
+      "image": "https://cdn.pixabay.com/photo/2015/03/11/01/21/yoda-667955_1280.jpg",
+      "title": "Yoda Plush Toy",
+      "price": "$24.99",
+      "details": "Un juguete de peluche de Yoda, perfecto para los pequeños fans de Star Wars.",
+      "categoryId": 0
+    },
+    {
+      "id": 13,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Xbox_Series_X_2.jpg/800px-Xbox_Series_X_2.jpg",
+      "title": "Xbox Series X",
+      "price": "$499.99",
+      "details": "La Xbox Series X es conocida por su potencia y capacidad de rendimiento. Ofrece compatibilidad retro con juegos anteriores de Xbox.",
+      "categoryId": 1
+    },
+    {
+      "id": 25,
+      "image": "https://cdn.pixabay.com/photo/2017/02/20/04/49/ultimate-2081605_1280.png",
+      "title": "Monopoly Classic",
+      "price": "$19.99",
+      "details": "El clásico juego de mesa Monopoly, ideal para pasar horas de diversión en familia.",
       "categoryId": 2
     },
     {
-      "id": "10",
-      "image": "https://picsum.photos/200/300?random=10",
-      "title": "Star Wars",
-      "price": "21",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
+      "id": 7,
+      "image": "https://cdn.pixabay.com/photo/2023/04/11/15/52/ai-generated-7917612_1280.jpg",
+      "title": "Boba Fett Action Figure",
+      "price": "$34.99",
+      "details": "Una figura de acción de Boba Fett con detalles realistas y múltiples articulaciones.",
       "categoryId": 0
     },
     {
-      "id": "11",
-      "image": "https://picsum.photos/200/300?random=11",
-      "title": "Star Wars",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
+      "id": 16,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Nintendo-3DS-AquaOpen.png/800px-Nintendo-3DS-AquaOpen.png",
+      "title": "Nintendo 3DS",
+      "price": "$169.99",
+      "details": "La Nintendo 3DS es una consola portátil con juegos en 3D sin necesidad de gafas especiales. Es ideal para viajes.",
+      "categoryId": 1
+    },
+    {
+      "id": 10,
+      "image": "https://cdn.pixabay.com/photo/2016/07/10/07/43/king-1507392_1280.jpg",
+      "title": "Rey Action Figure",
+      "price": "$29.99",
+      "details": "Una figura de acción de Rey con detalles realistas y múltiples articulaciones.",
       "categoryId": 0
     },
     {
-      "id": "12",
-      "image": "https://picsum.photos/200/300?random=12",
-      "title": "Star Wars 1",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
-      "categoryId": 0
-    },
-    {
-      "id": "13",
-      "image": "https://picsum.photos/200/300?random=13",
-      "title": "Star Wars 1",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
-      "categoryId": 0
-    },
-    {
-      "id": "14",
-      "image": "https://picsum.photos/200/300?random=14",
-      "title": "Star Wars 1",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
-      "categoryId": 0
-    },
-    {
-      "id": "15",
-      "image": "https://picsum.photos/200/300?random=15",
-      "title": "Star Wars 1",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
-      "categoryId": 0
-    },
-    {
-      "id": "16",
-      "image": "https://picsum.photos/200/300?random=16",
-      "title": "Consolas",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
+      "id": 15,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Microsoft-Xbox-One-Console-Set-wKinect.jpg/300px-Microsoft-Xbox-One-Console-Set-wKinect.jpg",
+      "title": "Xbox One",
+      "price": "$199.99",
+      "details": "La Xbox One ofrece una gran variedad de juegos y servicios en la nube. Es una opción sólida para los jugadores casuales.",
       "categoryId": 1
     },
     {
-      "id": "17",
-      "image": "https://picsum.photos/200/300?random=17",
-      "title": "Consolas",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
+      "id": 14,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/PS4-Console-wDS4.png/1920px-PS4-Console-wDS4.png",
+      "title": "PlayStation 4",
+      "price": "$199.99",
+      "details": "La PlayStation 4 sigue siendo una opción popular con una amplia selección de juegos y experiencias multijugador.",
       "categoryId": 1
     },
     {
-      "id": "18",
-      "image": "https://picsum.photos/200/300?random=18",
-      "title": "Consolas",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
-      "categoryId": 1
-    },
-    {
-      "id": "19",
-      "image": "https://picsum.photos/200/300?random=19",
-      "title": "Consolas",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
-      "categoryId": 1
-    },
-    {
-      "id": "20",
-      "image": "https://picsum.photos/200/300?random=20",
-      "title": "Consolas",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
-      "categoryId": 1
-    },
-    {
-      "id": "21",
-      "image": "https://picsum.photos/200/300?random=21",
-      "title": "Consolas",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
-      "categoryId": 1
-    },
-    {
-      "id": "22",
-      "image": "https://picsum.photos/200/300?random=22",
-      "title": "Otros",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
+      "id": 23,
+      "image": "https://cdn.pixabay.com/photo/2020/03/08/18/27/building-blocks-4913375_1280.jpg",
+      "title": "Hot Wheels Track Builder",
+      "price": "$49.99",
+      "details": "Un set de construcción de pistas Hot Wheels para carreras emocionantes.",
       "categoryId": 2
     },
     {
-      "id": "23",
-      "image": "https://picsum.photos/200/300?random=23",
-      "title": "Otros",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
+      "id": 19,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Wii_console.png/800px-Wii_console.png",
+      "title": "Nintendo Wii",
+      "price": "$99.99",
+      "details": "La Nintendo Wii es conocida por su innovador control de movimiento y una gran variedad de juegos familiares.",
+      "categoryId": 1
+    },
+    {
+      "id": 30,
+      "image": "https://cdn.pixabay.com/photo/2021/07/09/08/41/air-rescue-6398654_1280.jpg",
+      "title": "Paw Patrol Adventure Bay Rescue",
+      "price": "$49.99",
+      "details": "Un set de rescate de la Patrulla Canina, ideal para aventuras emocionantes.",
       "categoryId": 2
     },
     {
-      "id": "24",
-      "image": "https://picsum.photos/200/300?random=24",
-      "title": "Otros",
-      "price": "124",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
+      "id": 17,
+      "image": "hhttps://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/PlayStation_Vita_illustration.svg/1920px-PlayStation_Vita_illustration.svg.png",
+      "title": "PlayStation Vita",
+      "price": "$149.99",
+      "details": "La PlayStation Vita es una consola portátil con una pantalla táctil y una gran selección de juegos exclusivos.",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "image": "https://cdn.pixabay.com/photo/2023/04/10/18/43/ai-generated-7914418_1280.jpg",
+      "title": "Darth Vader Action Figure",
+      "price": "$29.99",
+      "details": "Una figura de acción de Darth Vader con múltiples articulaciones y detalles impresionantes.",
+      "categoryId": 0
+    },
+    {
+      "id": 27,
+      "image": "https://cdn.pixabay.com/photo/2022/06/18/07/57/optimus-prime-7269343_1280.jpg",
+      "title": "Transformers Optimus Prime",
+      "price": "$39.99",
+      "details": "Una figura transformable de Optimus Prime, líder de los Autobots.",
       "categoryId": 2
     },
     {
-      "id": "25",
-      "image": "https://picsum.photos/200/300?random=25",
-      "title": "Otros",
-      "details": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam tempora commodi similique voluptatum id animi suscipit velit rem, dolores, iste temporibus et vitae, quos quasi modi nostrum totam reiciendis necessitatibus.",
-      "price": "124",
+      "id": 6,
+      "image": "https://cdn.pixabay.com/photo/2018/01/25/10/08/star-wars-3105826_1280.png",
+      "title": "Stormtrooper Helmet",
+      "price": "$49.99",
+      "details": "Una réplica del casco de un stormtrooper de Star Wars, perfecta para coleccionistas.",
+      "categoryId": 0
+    },
+    {
+      "id": 20,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Sony-PlayStation-3-2001A-wController-L.jpg/1920px-Sony-PlayStation-3-2001A-wController-L.jpg",
+      "title": "PlayStation 3",
+      "price": "$99.99",
+      "details": "La PlayStation 3 ofrece una gran selección de juegos y servicios en la nube, así como soporte para Blu-ray.",
+      "categoryId": 1
+    },
+    {
+      "id": 28,
+      "image": "https://static.wikia.nocookie.net/toys-that-make-noise/images/9/9f/Smart_Stages_Chair_2024.jpg/revision/latest/scale-to-width-down/1000?cb=20240317140501",
+      "title": "Fisher-Price Laugh & Learn Smart Stages Chair",
+      "price": "$29.99",
+      "details": "Una silla interactiva de Fisher-Price para el aprendizaje temprano de los niños pequeños.",
       "categoryId": 2
+    },
+    {
+      "id": 11,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Nintendo-Switch-wJoyCons-BlRd-Standing-FL.jpg/1280px-Nintendo-Switch-wJoyCons-BlRd-Standing-FL.jpg",
+      "title": "Nintendo Switch",
+      "price": "299.99",
+      "details": "La Nintendo Switch es una consola híbrida que se puede usar tanto en modo portátil como en modo de sobremesa. Tiene una gran biblioteca de juegos exclusivos de Nintendo.",
+      "categoryId": 1
+    },
+    {
+      "id": 4,
+      "image": "https://cdn.pixabay.com/photo/2017/07/31/16/41/bb8-2558879_1280.jpg",
+      "title": "R2-D2 Robot",
+      "price": "$39.99",
+      "details": "Un robot R2-D2 que se puede mover y emitir sonidos característicos del personaje.",
+      "categoryId": 0
+    },
+    {
+      "id": 22,
+      "image": "https://cdn.pixabay.com/photo/2023/09/18/06/00/ai-generated-8259725_1280.jpg",
+      "title": "Barbie Dreamhouse",
+      "price": "$199.99",
+      "details": "La casa de los sueños de Barbie, con múltiples habitaciones y accesorios.",
+      "categoryId": 2
+    },
+    {
+      "id": 5,
+      "image": "https://media.istockphoto.com/id/1460003643/photo/two-glowing-crossed-laser-swords-with-green-and-red-color-against-black-background-lying-on.jpg?s=1024x1024&w=is&k=20&c=chNl4DIKulArDIHtEUK5uf1RwwYAQ2ADU27VEEVWMUw=",
+      "title": "Lightsaber",
+      "price": "$19.99",
+      "details": "Un sable de luz de Star Wars que emite luz y sonido, ideal para jugar y recrear escenas.",
+      "categoryId": 0
+    },
+    {
+      "id": 9,
+      "image": "https://cdn.pixabay.com/photo/2017/08/06/13/17/star-wars-2592430_1280.jpg",
+      "title": "Death Star Playset",
+      "price": "$59.99",
+      "details": "Un set de juego del Death Star con múltiples características y personajes.",
+      "categoryId": 0
+    },
+    {
+      "id": 26,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Play_dough_04799.jpg/800px-Play_dough_04799.jpg",
+      "title": "Play-Doh Kitchen Creations",
+      "price": "$14.99",
+      "details": "Un set de Play-Doh para crear comidas imaginarias y divertidas.",
+      "categoryId": 2
+    },
+    {
+      "id": 12,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Black_and_white_Playstation_5_base_edition_with_controller.png/800px-Black_and_white_Playstation_5_base_edition_with_controller.png",
+      "title": "PlayStation 5",
+      "price": "$499.99",
+      "details": "La PlayStation 5 ofrece gráficos impresionantes y un rendimiento rápido gracias a su SSD personalizado. Es ideal para juegos de alta definición.",
+      "categoryId": 1
+    },
+    {
+      "id": 18,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Xbox-360-S-and-E.png/1280px-Xbox-360-S-and-E.png",
+      "title": "Xbox 360",
+      "price": "$99.99",
+      "details": "La Xbox 360 es una consola clásica con una amplia biblioteca de juegos y soporte para juegos en línea.",
+      "categoryId": 1
     }
   ],
   "categories": [
