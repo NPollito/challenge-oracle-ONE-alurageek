@@ -16,6 +16,10 @@ li {
   overflow: hidden;
 }
 
+.inactive {
+  display: none;
+}
+
 /* Boton */
 .button__link {
   background-color: var(--color-primary);

@@ -2,7 +2,7 @@
   "name": "challenge-oracle-one-alurageek",
   "version": "1.0.0",
   "description": "Simulación de un CRUD con json-server",
-  "main": "main.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
