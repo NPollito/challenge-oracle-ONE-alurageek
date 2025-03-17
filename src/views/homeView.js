@@ -4,11 +4,15 @@ import categoryContainer from "../components/categoryContainer.js"
 import productContainer from "../components/productContainer.js"
 import { 
   buttonAcces,
+  sectionProductsDetails,
   sectionLogin,
-  sectionADdProducts,
-  sectionProducts,
+  sectionAdministrator,
+  sectionAddProducts,
+  sectionBanner,
+  sectionProducts
 } from "../helpers/nodes.js"
 
+import deleteNodes from "../helpers/deleteNodes.js"
 
 buttonAcces.addEventListener('click', () => {
   location.hash = '#login'
@@ -16,8 +20,14 @@ buttonAcces.addEventListener('click', () => {
 
 async function homeView() {
 
-  sectionLogin.style.display = 'none'
-  sectionADdProducts.style.display = 'none'
+  sectionProductsDetails.style.display = "none"
+  sectionLogin.style.display = "none"
+  sectionAdministrator.style.display = "none"
+  sectionAddProducts.style.display = "none"
+
+  buttonAcces.classList.remove('inactive')
+  sectionBanner.style.display = "block"
+  sectionProducts.style.display = 'block'
   
   // instacias de los modelos
   const categoryController = new CategoryController()
@@ -25,10 +35,8 @@ async function homeView() {
   
   const productsController = new ProductsController()
   
-  // Productos y Categorias
-  const containerProducts = document.querySelector('.products')
-  
-  // crear categories
+  // crear categorias y productos
+  deleteNodes(sectionProducts)
 
   for( const category of categories ) {
 
@@ -45,7 +53,7 @@ async function homeView() {
     sectionCards.appendChild(cardsContainer)
     
     // agregar productos
-    const products = await productsController.getProducts(category.id)
+    const products = await productsController.getProducts(category.id, 6)
     products.forEach(product => {
 
       const { image, title, price, id } = product
@@ -53,10 +61,8 @@ async function homeView() {
     });
     
     container.appendChild(sectionCards)
-    containerProducts.appendChild(container)
+    sectionProducts.appendChild(container)
   }
-
-  return containerProducts
 };
 
 export default homeView;

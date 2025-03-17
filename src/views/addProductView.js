@@ -1,5 +1,5 @@
 import deleteNodes from "../helpers/deleteNodes.js"
-import Button from "../components/Button.js"
+// import Button from "../components/Button.js"
 
 import {
   inputSearch,
@@ -7,7 +7,7 @@ import {
   buttonContainer,
   sectionBanner,
   sectionProducts,
-  sectionADdProducts,
+  sectionAddProducts,
   sectionLogin,
   sectionAdministrator,
   footer
@@ -27,7 +27,7 @@ function addProductView() {
   searchForm.classList.add('inactive')
   sectionBanner.classList.add('inactive')
   sectionProducts.classList.add('inactive')
-  sectionADdProducts.style.display = 'flex'
+  sectionAddProducts.style.display = 'flex'
   sectionLogin.style.display = 'none'
   sectionAdministrator.classList.add('inactive')
   footer.classList.add('inactive')

@@ -7,7 +7,7 @@ import {
   buttonContainer,
   sectionBanner,
   sectionProducts,
-  sectionADdProducts,
+  sectionAddProducts,
   sectionLogin,
   sectionAdministrator,
   buttonAddProduct,
@@ -25,7 +25,7 @@ function administratorView() {
   buttonAcces.classList.add('inactive')
   sectionBanner.classList.add('inactive')
   sectionProducts.classList.add('inactive')
-  sectionADdProducts.style.display = 'none'
+  sectionAddProducts.style.display = 'none'
   sectionLogin.style.display = 'none'
   sectionAdministrator.classList.remove('inactive')
   footer.classList.remove('inactive')

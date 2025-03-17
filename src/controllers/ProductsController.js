@@ -3,8 +3,13 @@ import Product from "../models/productModel.js";
 
 class ProductsController {
 
-  async getProducts(id) {
-    const data = await fetchData(`/categories/${id}/products?_limit=6`)
+  async getProduct(id) {
+    const data = await fetchData(`/products/${id}`)
+    return data
+  }
+
+  async getProducts(id, limit) {
+    const data = await fetchData(`/categories/${id}/products?_limit=${limit}`)
 
     return data ? data.map(product => {
       const {id, image, title, price, details, categoryId} = product

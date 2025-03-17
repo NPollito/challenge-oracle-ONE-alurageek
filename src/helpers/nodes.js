@@ -9,8 +9,9 @@ export const buttonAdministrator = document.querySelector('.button__link--admini
 // sections
 export const sectionBanner = document.querySelector('.banner')
 export const sectionProducts = document.querySelector('.products')
+export const sectionProductsDetails = document.querySelector('.product__details')
 export const sectionLogin = document.querySelector('.login')
-export const sectionADdProducts = document.querySelector('.add-new-product')
+export const sectionAddProducts = document.querySelector('.add-new-product')
 export const sectionAdministrator = document.querySelector('.administrator')
 export const footer = document.querySelector('.footer')
 
