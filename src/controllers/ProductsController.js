@@ -8,7 +8,7 @@ class ProductsController {
     return data
   }
 
-  async getProducts(id, limit) {
+  async getProducts(id, limit = '') {
     const data = await fetchData(`/categories/${id}/products?_limit=${limit}`)
 
     return data ? data.map(product => {

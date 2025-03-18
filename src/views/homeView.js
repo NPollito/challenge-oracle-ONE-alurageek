@@ -4,12 +4,15 @@ import categoryContainer from "../components/categoryContainer.js"
 import productContainer from "../components/productContainer.js"
 import { 
   buttonAcces,
+  buttonConsoles,
   sectionProductsDetails,
   sectionLogin,
   sectionAdministrator,
   sectionAddProducts,
   sectionBanner,
-  sectionProducts
+  sectionProducts,
+  sectionCategory,
+  footer
 } from "../helpers/nodes.js"
 
 import deleteNodes from "../helpers/deleteNodes.js"
@@ -18,9 +21,15 @@ buttonAcces.addEventListener('click', () => {
   location.hash = '#login'
 })
 
+buttonConsoles.addEventListener('click', () => {
+  
+  location.hash = '#category=consolas&id=1'
+})
+
 async function homeView() {
 
   sectionProductsDetails.style.display = "none"
+  sectionCategory.style.display = "none"
   sectionLogin.style.display = "none"
   sectionAdministrator.style.display = "none"
   sectionAddProducts.style.display = "none"
@@ -28,6 +37,7 @@ async function homeView() {
   buttonAcces.classList.remove('inactive')
   sectionBanner.style.display = "block"
   sectionProducts.style.display = 'block'
+  footer.style.display = 'block'
   
   // instacias de los modelos
   const categoryController = new CategoryController()
@@ -42,7 +52,7 @@ async function homeView() {
 
     const container = document.createElement('DIV')
     container.classList.add('products__container', 'container')
-    container.appendChild(categoryContainer(category.name, true))
+    container.appendChild(categoryContainer(category.name, true, category.id))
 
     const sectionCards = document.createElement('SECTION')
     sectionCards.classList.add('cards')

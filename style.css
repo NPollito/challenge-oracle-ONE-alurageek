@@ -255,6 +255,11 @@ input[type="checkbox"] {
   }
 }
 
+/* section category */
+
+.category-products {
+  margin-top: 15px;
+}
 
 /* section products details */
 .product__details {

@@ -10,15 +10,19 @@ import {
   sectionAddProducts,
   sectionProductsDetails,
   sectionAdministrator,
+  sectionCategory,
 } from '../helpers/nodes.js'
 
 
 sectionProductsDetails.addEventListener('click', (e) => {
     
-  if ( e.target.classList.contains('button__link') ) {
+  if ( e.target.classList.contains('button__link--product') ) {
     
     const productId = e.target.dataset.id
     location.hash = `#product=${productId}`
+
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
   }
 })
 
@@ -27,6 +31,7 @@ async function produtcView() {
   buttonAcces.classList.add('inactive')
   sectionBanner.style.display = 'none'
   sectionProducts.style.display = 'none'
+  sectionCategory.style.display = 'none'
   sectionLogin.style.display = 'none'
   sectionAdministrator.style.display = 'none'
   sectionAddProducts.style.display = 'none'
