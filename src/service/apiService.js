@@ -1,8 +1,9 @@
 const API_JSON_SERVER = 'http://localhost:3000'
+const URL_VERCEL = 'https://json-test-one.vercel.app'
 
 async function fetchData(edpoint) {
   try {
-    const response = await fetch(`${API_JSON_SERVER}${edpoint}`)
+    const response = await fetch(`${URL_VERCEL}${edpoint}`)
     return await response.json()
     
   } catch (error) {
