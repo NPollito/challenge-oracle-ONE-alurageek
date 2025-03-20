@@ -16,6 +16,15 @@ class ProductsController {
       return new Product(id, image, title, price, details, categoryId)
     }) : []
   }
+
+  async getProductsTotal() {
+    const data = await fetchData('/products')
+
+    return data ? data.map(product => {
+      const {id, image, title, price, details, categoryId} = product
+      return new Product(id, image, title, price, details, categoryId)
+    }) : []
+  }
 };
 
 export default ProductsController;
