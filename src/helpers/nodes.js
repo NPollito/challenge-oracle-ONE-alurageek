@@ -11,7 +11,6 @@ export const buttonBack = document.querySelector('.buttonBack')
 export const deleteSearch = document.querySelector('.input__closed')
 
 
-
 // sections
 export const sectionBanner = document.querySelector('.banner')
 export const sectionProducts = document.querySelector('.products')
@@ -23,6 +22,7 @@ export const sectionAdministrator = document.querySelector('.administrator')
 export const searchResults = document.querySelector('.search__result')
 export const searchResultsDesktop = document.querySelector('.search__result-desktop')
 export const footer = document.querySelector('.footer')
+export const header = document.querySelector('header')
 
 
 // container

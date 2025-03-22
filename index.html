@@ -29,7 +29,7 @@
           </label>
         </li>
         <li class="input input--color">
-          <input type="text" class="input__search" placeholder="Buscar">
+          <input type="text" class="input__search" placeholder="Buscar" autofocus>
           <span class="input__closed" title="Borrar Todo"></span>
         </li>
       </ul>
@@ -65,17 +65,17 @@
     <section class="product__details"></section>
 
     <section class="login">
-      <form class="form">
+      <form class="form form__login">
         <h3 class="form__title">Iniciar Seción</h3>
         <div class="form__container">
           <div class="form__group">
-            <input type="email" id="email" class="form__input" name="Email" placeholder=" " />
-            <label for="email" class="form__label">Correo electronico</label>
+            <input type="email" id="emailUser" class="form__input" name="email" placeholder=" " />
+            <label for="emailUser" class="form__label">Correo electronico</label>
             <span class="form__line"></span>
           </div>
           <div class="form__group">
-            <input type="password" id="pass" class="form__input" name="Contraseña" placeholder=" " />
-            <label for="pass" class="form__label">Contraseña</label>
+            <input type="password" id="passUser" class="form__input" name="password" placeholder=" " />
+            <label for="passUser" class="form__label">Contraseña</label>
             <span class="form__line"></span>
           </div>
           <input type="submit" class="button__link button__link--login" value="Entrar" disabled />
@@ -183,13 +183,13 @@
         <h3 class="form__title form__title--config">Hable con nosotros</h3>
         <div class="form__container">
           <div class="form__group">
-            <input type="text" id="name" class="form__input" placeholder=" " />
-            <label for="name" class="form__label">Nombre</label>
+            <input type="text" id="nameUser" class="form__input" name="name" placeholder=" " />
+            <label for="nameUser" class="form__label">Nombre</label>
             <span class="form__line"></span>
           </div>
           <div class="form__group">
-            <textarea id="message" class="form__input form__input--textarea" placeholder=" "></textarea>
-            <label for="message" class="form__label">Escribe tu mensaje</label>
+            <textarea id="messageUser" class="form__input form__input--textarea" name="message" placeholder=" "></textarea>
+            <label for="messageUser" class="form__label">Escribe tu mensaje</label>
             <span class="form__line"></span>
           </div>
           <input type="submit" class="button__link button__link--sendMessage" value="Enviar mensaje" disabled />

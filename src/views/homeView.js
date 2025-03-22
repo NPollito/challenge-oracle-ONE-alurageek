@@ -2,7 +2,8 @@ import CategoryController from "../controllers/CategoryController.js"
 import ProductsController from "../controllers/ProductsController.js"
 import categoryContainer from "../components/categoryContainer.js"
 import productContainer from "../components/productContainer.js"
-import { 
+import {
+  header,
   buttonAcces,
   buttonConsoles,
   sectionProductsDetails,
@@ -28,12 +29,18 @@ buttonConsoles.addEventListener('click', () => {
 
 async function homeView() {
 
+  // mostrar y ocultar elementos  
   sectionProductsDetails.style.display = "none"
   sectionCategory.style.display = "none"
   sectionLogin.style.display = "none"
   sectionAdministrator.style.display = "none"
   sectionAddProducts.style.display = "none"
 
+  // header.querySelector('.search').style.display = 'block'
+  screen.availWidth >= 700
+    ? header.querySelector('.search').style.display = 'none'
+    : header.querySelector('.search').style.display = 'block'
+  header.querySelector('.input--config').style.display = 'flex'
   buttonAcces.classList.remove('inactive')
   sectionBanner.style.display = "block"
   sectionProducts.style.display = 'block'
