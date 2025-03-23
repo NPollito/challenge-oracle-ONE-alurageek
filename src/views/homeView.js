@@ -74,7 +74,7 @@ async function homeView() {
     products.forEach(product => {
 
       const { image, title, price, id } = product
-      cardsContainer.appendChild(productContainer(image, title, price, id))
+      cardsContainer.appendChild(productContainer(image, title, price, id, false))
     });
     
     container.appendChild(sectionCards)

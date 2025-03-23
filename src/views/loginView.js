@@ -25,7 +25,6 @@ function loginView() {
 
   // mostrar y ocultar elementos 
   header.querySelector('.search').style.display = 'none'
-  header.querySelector('.search').style.display = 'none'
   header.querySelector('.input--config').style.display = 'none'
   buttonAcces.classList.add('inactive')
   sectionBanner.style.display = 'none'
@@ -69,6 +68,11 @@ function loginView() {
         
         alertMessage(formLogin, 'Redirigiendo...')
 
+        // redirigir a la pagina de administrador
+        setTimeout(() => {
+          location.hash = '#administrator'
+        }, 3000);
+        
       }, 5000)
     }
   }

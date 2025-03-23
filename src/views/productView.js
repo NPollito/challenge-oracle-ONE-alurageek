@@ -88,7 +88,7 @@ async function produtcView() {
   // products
   products.forEach(product => {
     const { image, title, price, id } = product
-    containerCards.appendChild(productContainer(image, title, price, id))
+    containerCards.appendChild(productContainer(image, title, price, id, false))
   });
 
   containerImage.appendChild(image)

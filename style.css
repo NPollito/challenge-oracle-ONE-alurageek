@@ -471,6 +471,10 @@ input[type="checkbox"] {
   font-size: 1.375rem;
 }
 
+.card__id {
+  margin-top: 5px;
+}
+
 .button__link--createProduct {
   width: 150px;
   transition: background-color .5s ease-in;
@@ -491,7 +495,6 @@ input[type="checkbox"] {
 
 .card__edit,
 .card__delete {
-  display: block;
   background-color: var(--color-primary);
   border-radius: 50%;
   width: 30px;

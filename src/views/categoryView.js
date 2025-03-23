@@ -68,7 +68,7 @@ async function categoryView() {
   products.forEach(product => {
     
     const { image, title, price, id } = product
-    cardsContainer.appendChild(productContainer(image, title, price, id))
+    cardsContainer.appendChild(productContainer(image, title, price, id, false))
   });
     
   sectionCards.appendChild(cardsContainer)
