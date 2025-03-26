@@ -43,13 +43,14 @@ function loginView() {
   dataForm.password = ''
 
   // eventos
-  emailInpunt.addEventListener('blur', validate)
-  passwordInput.addEventListener('blur', validate)
+  emailInpunt.addEventListener('input', validate)
+  passwordInput.addEventListener('input', validate)
 
   formLogin.addEventListener('submit', validateForm)
 
-  function validateForm(e) {
-    e.preventDefault()
+  async function validateForm(e) {
+    e.preventDefault();
+    e.stopPropagation();
 
     // verificar si existe un spinner 
     const exists = document.querySelector('.container-spinner') 

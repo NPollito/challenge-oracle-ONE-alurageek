@@ -1,31 +1,27 @@
 
-function alertMessage(container, message, typeMessage) {
+function alertMessage(container, message, typeMessage = 'success') {
 
-  const exists = document.querySelector('.alert')
+  if( document.querySelector('alert') ){
+    return Promise.resolve()  // Resolver inmediatamente si ya existe una alerta
+  }
 
-  if( !exists ) {
+  return new Promise(resolve => {
 
     const containerAlert = document.createElement('DIV')
     containerAlert.classList.add('alert')
     
-    if ( typeMessage === 'error' ) {
-  
-      containerAlert.style.background = 'red'
-    } else {    
-  
-      containerAlert.style.background = 'green'
-    }
-  
+    containerAlert.style.background = typeMessage === 'error' ? 'red' : 'green'
     containerAlert.textContent = message
-  
-    // agregar elemento
+
     container.appendChild(containerAlert)
-  
+
+    // Eliminar la alerta después de 3 segundos y resolver la promesa
     setTimeout(() => {
-      containerAlert.remove()
+      containerAlert.remove();
+      resolve();
     }, 3000);
 
-  }
+  }) 
 };
 
 export default alertMessage;

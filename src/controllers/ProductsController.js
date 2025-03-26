@@ -25,6 +25,16 @@ class ProductsController {
       return new Product(id, image, title, price, details, categoryId)
     }) : []
   }
+
+  async postProduct(product) {
+    return await fetchData('/products', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(product)
+    })
+  }
 };
 
 export default ProductsController;

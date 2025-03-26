@@ -28,11 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
 dataForm.name = ''
 dataForm.message = ''
 
-nameInput.addEventListener('blur', validate)
-messageInput.addEventListener('blur', validate)
+nameInput.addEventListener('input', validate)
+messageInput.addEventListener('input', validate)
 
 formFooter.addEventListener('submit', (e) => {
   e.preventDefault()
+  e.stopPropagation();
   
    // verificar si existe un spinner 
    const exists = document.querySelector('.container-spinner')

@@ -44,7 +44,6 @@
     
   </header>
   
-
   <main class="main">
     <section class="banner">
       <div class="banner__container container">
@@ -93,46 +92,40 @@
     </section>
 
     <section class="add-new-product">
-      <form class="form form__config--section">
+      <form class="form form__config--section form__newProduct">
         <h3 class="form__title form__title--section">Agregar nuevo producto</h3>
+        
         <div class="form__container">
-          <div class="form__group drag-drop">
-            <input type="file" id="load-image" hidden>
 
-            <article class="drag-drop__details">
-              <h3 class="drag-drop__title">Arrastra y Suelta tu Imagen</h3>
-              <button class="button__link button__link--loadImage">Cargar Imagen</button>
-            </article>
-
-            <!-- <figure class="drag-drop__image-container">
-                <img src="./src/assets/images/unsplash_6FDXGY9J6y4.jpg" class="drag-drop__image" alt="imagen cargada">
-                <span class="drag-drop__close" title="Eliminar">x</span>
-                <figcaption class="drag-drop__details-image">detalles</figcaption>
-              </figure> -->
+          <div class="form__group">
+            <div class="drag-drop">
+              <h3 class="drag-drop__title">Haz clic o arrastra una imagen a esta área para subirlo</h3>
+              <input type="file" name="" id="" hidden>
+            </div>
           </div>
 
           <div class="form__group">
             <label class="form__label form__label--select" for="category">Categoría:</label>
-            <select id="category" name="categories" class="form__input form__input--select">
+            <select id="category" name="categoryId" class="form__input form__input--select">
               <option selected disabled>-- Seleccionar categoría --</option>
-              <option value="ST">Star ward</option>
-              <option value="CO">Consolas</option>
-              <option value="OT">Otros</option>
+              <option value="0">Star ward</option>
+              <option value="1">Consolas</option>
+              <option value="2">Otros</option>
             </select>
           </div>
 
           <div class="form__group">
-            <input type="text" id="nom-product" class="form__input" name="Nombre" placeholder=" " />
+            <input type="text" id="nom-product" class="form__input" name="title" placeholder=" " />
             <label for="nom-product" class="form__label">Nombre del producto</label>
             <span class="form__line"></span>
           </div>
           <div class="form__group">
-            <input type="number" id="price" class="form__input" name="Precio" placeholder=" " />
+            <input type="number" id="price" class="form__input" name="price" placeholder=" " />
             <label for="price" class="form__label">Precio del producto</label>
             <span class="form__line"></span>
           </div>
           <div class="form__group">
-            <textarea id="description" class="form__input form__input--textarea" name="Descripcion"
+            <textarea id="description" class="form__input form__input--textarea" name="details"
               placeholder=" "></textarea>
             <label for="description" class="form__label">Descripción del producto</label>
             <span class="form__line"></span>

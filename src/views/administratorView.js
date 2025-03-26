@@ -1,5 +1,6 @@
 import ProductsController from "../controllers/ProductsController.js"
 import productContainer from "../components/productContainer.js"
+import deleteNodes from '../helpers/deleteNodes.js'
 import {
   header,
   buttonAcces,
@@ -14,7 +15,7 @@ import {
 } from "../helpers/nodes.js"
 
 // variables
-const containerAdministrator = document.querySelector('.administrator__products ')
+const containerAdministrator = document.querySelector('.administrator__products')
 
 // eventos
 containerAdministrator.addEventListener('click', (e) => {
@@ -28,6 +29,12 @@ containerAdministrator.addEventListener('click', (e) => {
   // eliminar producto
   if ( e.target.classList.contains('card__delete')  ) {
     console.log('Eliminado: ' + e.target.dataset.id);
+    return
+  }
+
+  // agregar un nuvo producto
+  if ( e.target.classList.contains('button__link--createProduct') ) {
+    location.hash = '#addNewProduct'
     return
   }
 })
@@ -52,12 +59,28 @@ async function administratorView() {
   const products = await productsController.getProductsTotal()
 
   // crear html
+  deleteNodes(containerAdministrator) // limpiar html
+
+  const sectionTexts = document.createElement('SECTION')
+  sectionTexts.classList.add('administrator__texts')
+
+  const title = document.createElement('H2')
+  title.classList.add('administrator__title')
+  title.textContent = 'Todos los Productos'
+
+  const button = document.createElement('BUTTON')
+  button.classList.add('button__link', 'button__link--createProduct')
+  button.textContent = 'Agregar Producto'
+  
+  sectionTexts.appendChild(title)
+  sectionTexts.appendChild(button)
+  containerAdministrator.appendChild(sectionTexts)
+
   const sectionCards = document.createElement('SECTION')
   sectionCards.classList.add('cards')
-
+  
   const cardsContainer = document.createElement('DIV')
   cardsContainer.classList.add('cards__container')
-  
   
   products.forEach(product => {
     const { image, title, price, id } = product

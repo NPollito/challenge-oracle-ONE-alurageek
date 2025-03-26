@@ -29,6 +29,11 @@ buttonConsoles.addEventListener('click', () => {
 
 async function homeView() {
 
+  // configurar boton acces
+  buttonAcces.classList.remove('inactive', 'button__link--administrator')
+  buttonAcces.classList.add('button__link--access')
+  buttonAcces.textContent = 'Acceso'
+
   // mostrar y ocultar elementos  
   sectionProductsDetails.style.display = "none"
   sectionCategory.style.display = "none"
@@ -36,12 +41,10 @@ async function homeView() {
   sectionAdministrator.style.display = "none"
   sectionAddProducts.style.display = "none"
 
-  // header.querySelector('.search').style.display = 'block'
   screen.availWidth >= 700
     ? header.querySelector('.search').style.display = 'none'
     : header.querySelector('.search').style.display = 'block'
   header.querySelector('.input--config').style.display = 'flex'
-  buttonAcces.classList.remove('inactive')
   sectionBanner.style.display = "block"
   sectionProducts.style.display = 'block'
   footer.style.display = 'block'
