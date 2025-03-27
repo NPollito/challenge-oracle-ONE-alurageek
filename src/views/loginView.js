@@ -65,7 +65,6 @@ function loginView() {
         spinnerContainer.remove()
 
         resetForm(e.target.querySelector('.button__link'), formLogin)
-        console.log(dataForm);
         
         alertMessage(formLogin, 'Redirigiendo...')
 

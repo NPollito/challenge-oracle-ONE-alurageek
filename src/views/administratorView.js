@@ -1,6 +1,8 @@
 import ProductsController from "../controllers/ProductsController.js"
 import productContainer from "../components/productContainer.js"
 import deleteNodes from '../helpers/deleteNodes.js'
+import { editMode } from "../js/form.js"
+
 import {
   header,
   buttonAcces,
@@ -18,17 +20,27 @@ import {
 const containerAdministrator = document.querySelector('.administrator__products')
 
 // eventos
-containerAdministrator.addEventListener('click', (e) => {
+containerAdministrator.addEventListener('click', async (e) => {
   
   // editar producto
   if ( e.target.classList.contains('card__edit')  ) {
-    console.log('Producto: ' + e.target.dataset.id);
+
+    const productoId = e.target.dataset.id
+
+    editMode.edit = true
+    location.hash = '#editProduct=' + productoId
     return
   }
   
   // eliminar producto
   if ( e.target.classList.contains('card__delete')  ) {
-    console.log('Eliminado: ' + e.target.dataset.id);
+    const productoId = e.target.dataset.id
+
+    const productsController = new ProductsController()
+    await productsController.deleteProduct(productoId)
+    alert('Producto eliminado correctamente')
+    location.reload()
+
     return
   }
 

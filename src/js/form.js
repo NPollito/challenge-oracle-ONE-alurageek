@@ -1,6 +1,7 @@
 import deleletePropertiesObjs from "../helpers/deletePropertiesObj.js"
 
 export let dataForm = {}
+export let editMode = {edit: false}
 
 export function validate(e) {
 
@@ -22,7 +23,6 @@ export function validate(e) {
 
   dataForm[e.target.name] = e.target.value
   showAlert(e.target)
-  console.log(dataForm);
 
   checkDataForm(buttonSubmit)
 }

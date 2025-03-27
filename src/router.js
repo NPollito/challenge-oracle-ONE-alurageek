@@ -46,6 +46,9 @@ function router() {
   } else if(location.hash.startsWith('#category=')) {
     categoryView()
 
+  } else if(location.hash.startsWith('#editProduct=')) {
+    addProductView()
+    
   } else {
     homeView()
   }

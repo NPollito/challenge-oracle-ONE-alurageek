@@ -1,6 +1,6 @@
 import ProductsController from "../controllers/ProductsController.js"
 import deleletePropertiesObjs from "../helpers/deletePropertiesObj.js"
-import { dataForm, validate, resetForm } from "../js/form.js"
+import { dataForm, validate, resetForm, editMode } from "../js/form.js"
 import alertMessage from '../components/alertMessage.js'
 import spinner from '../components/spinner.js'
 
@@ -27,6 +27,10 @@ const formNewProduct = document.querySelector('.form__newProduct')
 const dragDropContainer = document.querySelector('.drag-drop')
 const dragDropTitle = document.querySelector('.drag-drop__title')
 const inputFile = dragDropContainer.querySelector('input[type="file"]')
+
+// cambiar nombres
+const titleForm = formNewProduct.querySelector('.form__title')
+const nameSubmit = formNewProduct.querySelector('input[type="submit"]')
 
 // eventos
 buttonAdministrator.addEventListener('click', (e) => {
@@ -86,6 +90,11 @@ function processFile(file) {
       // crear img
       dragDropContainer.querySelector('h3').style.display = 'none'
 
+      if ( dragDropContainer.querySelector('img') ) {
+        dragDropContainer.querySelector('img').src = fileUrl
+        return
+      }
+
       const img = document.createElement('IMG')
       img.classList.add('drag-drop__image')
       img.setAttribute('src', fileUrl)
@@ -104,7 +113,6 @@ function processFile(file) {
   }
 }
 
-
 // validar inputs
 categoryInput.addEventListener('input', validate)
 nameInput.addEventListener('input', validate)
@@ -115,30 +123,62 @@ formNewProduct.addEventListener('submit', sendForm)
 
 async function sendForm(e) {
   e.preventDefault();
-  
-  dataForm.id = Date.now()  
-  
+
   // cargar spinner
   const spinnerContainer = spinner()
   formNewProduct.appendChild(spinnerContainer)
   
   const productsController = new ProductsController()
-  await productsController.postProduct(dataForm)
+
+  if ( editMode.edit ) {
     
+    // edit product    
+    await productsController.editProduct(dataForm)
+    
+  } else {
+    
+    dataForm.id = Date.now() 
+    
+    // agregar producto
+    await productsController.postProduct(dataForm)
+  }
+  
   // quitar sppiner, eliminar image y reset formulario
   spinnerContainer.remove()
   dragDropContainer.querySelector('h3').style.display = 'block'
   dragDropContainer.classList.remove('active')
   dragDropContainer.querySelector('img').remove()
-
+  
   resetForm(e.target.querySelector('.button__link'), formNewProduct)
+
+  editMode.edit
+  ? await alertMessage(formNewProduct, 'Editado Correctamente')
+  : await alertMessage(formNewProduct, 'Producto agregado correctamente')
   
-  await alertMessage(formNewProduct, 'Producto agregado correctamente')
-  
+  editMode.edit = false
   location.hash = '#administrator'
 }
 
-function addProductView() {
+// edit product
+function showProductEditing(product) {
+  const { id, image, title, price, details, categoryId } = product
+
+  // crear imagen
+  dragDropContainer.querySelector('h3').style.display = 'none'
+  const img = document.createElement('IMG')
+  img.classList.add('drag-drop__image')
+  img.setAttribute('src', image)
+
+  dragDropContainer.appendChild(img)
+
+
+  categoryInput.value = categoryId
+  nameInput.value = title             
+  priceInput.value = price
+  descriptionInput.value = details
+}
+
+async function addProductView() {
 
   // configurar boton administrador
   buttonAcces.classList.remove('inactive', 'button__link--access')
@@ -162,5 +202,31 @@ function addProductView() {
   dataForm.price = ''
   dataForm.details = ''
   dataForm.categoryId = ''
+
+  if ( editMode.edit ) {
+
+    const productsController = new ProductsController()
+    const [_, idProduct] = location.hash.split('=')
+    const product = await productsController.getProduct(idProduct)
+    const { id, image, title, price, details, categoryId } = product
+
+    dataForm.id = id
+    dataForm.image = image
+    dataForm.title = title
+    dataForm.price = price
+    dataForm.details = details
+    dataForm.categoryId = categoryId
+    
+    showProductEditing(product)
+
+    editMode.edit
+      ? titleForm.textContent = 'Editar Producto' 
+      : titleForm.textContent = 'Agregar nuevo producto'
+    editMode.edit 
+      ? nameSubmit.value = 'Editar Producto' 
+      : nameSubmit.value = 'Agregar Producto'
+
+  }
 };
+
 export default addProductView;

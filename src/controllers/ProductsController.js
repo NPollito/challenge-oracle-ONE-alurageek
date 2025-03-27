@@ -35,6 +35,22 @@ class ProductsController {
       body: JSON.stringify(product)
     })
   }
+
+  async editProduct(product) {
+    return await fetchData(`/products/${product.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(product)
+    })
+  }
+
+  async deleteProduct(id) {
+    return await fetchData(`/products/${id}`, {
+      method: 'DELETE'
+    }) 
+  }
 };
 
 export default ProductsController;
