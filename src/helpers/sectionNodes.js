@@ -1,0 +1,10 @@
+// sections
+export const sectionBanner = document.querySelector('.banner')
+export const sectionProducts = document.querySelector('.products')
+export const sectionCategoryProducts = document.querySelector('.category-products')
+export const sectionProductsDetails = document.querySelector('.product__details')
+export const sectionLogin = document.querySelector('.login')
+export const sectionAdministrator = document.querySelector('.administrator')
+export const sectionAddProducts = document.querySelector('.add-new-product')
+export const footer = document.querySelector('footer')
+export const header = document.querySelector('header')

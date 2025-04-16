@@ -1,86 +1,45 @@
-import CategoryController from "../controllers/CategoryController.js"
-import ProductsController from "../controllers/ProductsController.js"
-import categoryContainer from "../components/categoryContainer.js"
-import productContainer from "../components/productContainer.js"
-import {
-  header,
-  buttonAcces,
-  buttonConsoles,
-  sectionProductsDetails,
-  sectionLogin,
-  sectionAdministrator,
-  sectionAddProducts,
-  sectionBanner,
-  sectionProducts,
-  sectionCategory,
-  footer
-} from "../helpers/nodes.js"
+import categoryContainer from '../components/categoryContainer.js'
+import productContainer from '../components/productContainer.js'
+import handleProductClick from '../helpers/handleProductClick.js'
+import deleteNodes from '../helpers/deleteNodes.js'
 
-import deleteNodes from "../helpers/deleteNodes.js"
+// variables
+const buttonAccess = document.querySelector('.button__link')
+const buttonConsoles = document.querySelector('.button__link--consoles')
+const sectionProducts = document.querySelector('.products')
 
-buttonAcces.addEventListener('click', () => {
-  location.hash = '#login'
-})
+// eventos
+buttonAccess.addEventListener('click', () => location.href = './src/pages/login.html')
+buttonConsoles.addEventListener('click', () => location.href = `./src/pages/viewCategory.html?name=consolas?id=1`)
+sectionProducts.addEventListener('click', e => handleProductClick(e))
 
-buttonConsoles.addEventListener('click', () => {
+async function homeView(categoriesAndProducts) {
   
-  location.hash = '#category=consolas&id=1'
-})
-
-async function homeView() {
-
-  // configurar boton acces
-  buttonAcces.classList.remove('inactive', 'button__link--administrator')
-  buttonAcces.classList.add('button__link--access')
-  buttonAcces.textContent = 'Acceso'
-
-  // mostrar y ocultar elementos  
-  sectionProductsDetails.style.display = "none"
-  sectionCategory.style.display = "none"
-  sectionLogin.style.display = "none"
-  sectionAdministrator.style.display = "none"
-  sectionAddProducts.style.display = "none"
-
-  screen.availWidth >= 700
-    ? header.querySelector('.search').style.display = 'none'
-    : header.querySelector('.search').style.display = 'block'
-  header.querySelector('.input--config').style.display = 'flex'
-  sectionBanner.style.display = "block"
-  sectionProducts.style.display = 'block'
-  footer.style.display = 'block'
-  
-  // instacias de los modelos
-  const categoryController = new CategoryController()
-  const categories = await categoryController.getCategories()
-  
-  const productsController = new ProductsController()
-  
-  // crear categorias y productos
+  // crear categories y productos
   deleteNodes(sectionProducts)
 
-  for( const category of categories ) {
+  for (const {category, products} of categoriesAndProducts) {
 
     const container = document.createElement('DIV')
     container.classList.add('products__container', 'container')
+
     container.appendChild(categoryContainer(category.name, true, category.id))
 
+    // products
     const sectionCards = document.createElement('SECTION')
     sectionCards.classList.add('cards')
 
     const cardsContainer = document.createElement('DIV')
     cardsContainer.classList.add('cards__container')
+    
+    products.forEach(product => {
+      const { id, image, title, price } = product
+      cardsContainer.appendChild(productContainer(image, title, price, id, false))
+    })
 
     sectionCards.appendChild(cardsContainer)
-    
-    // agregar productos
-    const products = await productsController.getProducts(category.id, 6)
-    products.forEach(product => {
-
-      const { image, title, price, id } = product
-      cardsContainer.appendChild(productContainer(image, title, price, id, false))
-    });
-    
     container.appendChild(sectionCards)
+
     sectionProducts.appendChild(container)
   }
 };

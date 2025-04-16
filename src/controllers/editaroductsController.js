@@ -53,4 +53,4 @@ class ProductsController {
   }
 };
 
-export default ProductsController;
+// export default ProductsController;

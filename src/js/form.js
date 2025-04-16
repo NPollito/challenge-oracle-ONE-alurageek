@@ -1,13 +1,10 @@
-import deleletePropertiesObjs from "../helpers/deletePropertiesObj.js"
-
 export let dataForm = {}
-export let editMode = {edit: false}
 
-export function validate(e) {
+export function validateInput(e) {
 
   // obtener el bottom submit
-  const buttonSubmit = e.target.parentElement.parentElement.querySelector('.button__link')
-  
+  const buttonSubmit = e.target.closest('form').querySelector('.button__link');
+
   if( e.target.value.trim() === '' )  {
     showAlert(e.target)
     dataForm[e.target.name] = ''
@@ -22,9 +19,11 @@ export function validate(e) {
   }
 
   dataForm[e.target.name] = e.target.value
+
   showAlert(e.target)
 
-  checkDataForm(buttonSubmit)
+  checkDataForm(buttonSubmit) 
+
 }
 
 function checkDataForm(button) {
@@ -58,10 +57,6 @@ function showAlert(input) {
 }
 
 export function resetForm(buttonSubmit, container) {
-    
-  // eliminar todos las propiedades del objeto
-  deleletePropertiesObjs(dataForm)
-
+  buttonSubmit.style.opacity = '0.5'
   container.reset()
-  checkDataForm(buttonSubmit) 
 }

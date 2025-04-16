@@ -1,52 +1,18 @@
-import ProductsController from "../controllers/ProductsController.js"
 import productContainer from "../components/productContainer.js"
 import deleteNodes from "../helpers/deleteNodes.js"
+import handleProductClick from "../helpers/handleProductClick.js"
 
-import {
-  buttonAcces,
-  sectionBanner,
-  sectionProducts,
-  sectionLogin,
-  sectionAddProducts,
-  sectionProductsDetails,
-  sectionAdministrator,
-  sectionCategory,
-} from '../helpers/nodes.js'
+// variables
+const sectionProductsDetails = document.querySelector('.product__details')
 
+// eventos
+sectionProductsDetails.removeEventListener('click', e => handleProductClick(e))
+sectionProductsDetails.addEventListener('click', e => handleProductClick(e))
 
-sectionProductsDetails.addEventListener('click', (e) => {
-    
-  if ( e.target.classList.contains('button__link--product') ) {
-    
-    const productId = e.target.dataset.id
-    location.hash = `#product=${productId}`
-
-    document.body.scrollTop = 0
-    document.documentElement.scrollTop = 0
-  }
-})
-
-async function produtcView() {
-  
-  buttonAcces.classList.add('inactive')
-  sectionBanner.style.display = 'none'
-  sectionProducts.style.display = 'none'
-  sectionCategory.style.display = 'none'
-  sectionLogin.style.display = 'none'
-  sectionAdministrator.style.display = 'none'
-  sectionAddProducts.style.display = 'none'
-
-  sectionProductsDetails.style.display = 'block'
-
-  const [_, id] = location.hash.split('=')
-
-  // Instanciar producto
-  const productsController = new ProductsController()
-  const product = await productsController.getProduct(id)
-  const products = await productsController.getProducts(product.categoryId, 6)
-
-  // crear html
-  deleteNodes(sectionProductsDetails)
+function produtcView(product, products) {
+ 
+  // crear categoria del producto
+  deleteNodes(sectionProductsDetails) //eliminar nodes
 
   const containerProduct = document.createElement('SECTION')
   containerProduct.classList.add('product')
@@ -81,7 +47,6 @@ async function produtcView() {
 
   cards.appendChild(containerCards)
   
-  
   containerProducts.appendChild(title)
   containerProducts.appendChild(cards)
 
@@ -97,7 +62,6 @@ async function produtcView() {
 
   sectionProductsDetails.appendChild(containerProduct)
   sectionProductsDetails.appendChild(containerProducts)
-  
 };
 
 export default produtcView;

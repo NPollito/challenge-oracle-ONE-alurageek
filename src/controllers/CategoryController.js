@@ -1,17 +1,25 @@
-import fetchData from '../service/apiService.js'
-import Category from '../models/categoryModel.js'
+import CategoriesModel from '../models/CategoriesModel.js'
+import ProductsModel from '../models/ProductsModel.js'
+import categoryView from '../views/categoryView.js'
 
-class CategoryController {
+(async function() {
 
-  async getCategorie(id) {
-    const data = await fetchData(`/categories/${id}`)
-    return data
+  const idCategory = location.search.split('id=')[1]
+
+  try {
+  
+    // instaciar modelos
+    const categoriesModel = new CategoriesModel()
+    const category = await categoriesModel.getCategorie(idCategory)
+  
+    const productsModel = new ProductsModel()
+    const products = await productsModel.getCategorieProducts(category.id, undefined)
+    
+    categoryView(category, products)
+  
+  } catch(error) {
+    console.log('Category no se puede cargar ', error);
+    alert('La categoria y los productos no se puede cargar, intentalo más tarde')
   }
 
-  async getCategories() {
-    const data = await fetchData('/categories')
-    return data ? data.map(category => new Category(category.id, category.name)) : []
-  }
-};
-
-export default CategoryController;
+})()

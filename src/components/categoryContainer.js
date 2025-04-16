@@ -1,3 +1,5 @@
+import { scrollToTop }  from '../helpers/scrollToTop.js'
+
 function categoryContainer(title, showLink = false, idCategory) {
 
   const containerCategory = document.createElement('SECTION')
@@ -15,11 +17,9 @@ function categoryContainer(title, showLink = false, idCategory) {
     categoryLink.textContent = 'Ver todo'
     categoryLink.dataset.id = idCategory
     categoryLink.addEventListener('click', () => {
+      location.href = `./src/pages/viewCategory.html?name=${title.toLowerCase()}?id=${idCategory}`      
 
-      location.hash = `#category=${title.toLowerCase()}&id=${idCategory}`
-
-      document.body.scrollTop = 0
-      document.documentElement.scrollTop = 0
+      scrollToTop() //scroll top
     })
 
     const imageLink = document.createElement('IMG')

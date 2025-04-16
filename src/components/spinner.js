@@ -1,4 +1,4 @@
-function spinner() {
+export function showSpinner(container) {
     
   const spinnerContainer = document.createElement('DIV')
   spinnerContainer.classList.add('container-spinner')
@@ -7,7 +7,12 @@ function spinner() {
   
   spinnerContainer.appendChild(spinner)
 
-  return spinnerContainer
+  container.appendChild(spinnerContainer)
 };
 
-export default spinner;
+export function hideSpinner() {
+  const spinner = document.querySelector('.container-spinner')
+  if ( spinner ) {
+    spinner.remove()
+  }
+}

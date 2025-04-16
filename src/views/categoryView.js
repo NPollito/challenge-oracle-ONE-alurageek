@@ -1,61 +1,22 @@
-import CategoryController from '../controllers/CategoryController.js'
-import ProductsController from '../controllers/ProductsController.js'
-import categoryContainer from '../components/categoryContainer.js'
-import productContainer from '../components/productContainer.js'
+import categoryContainer from "../components/categoryContainer.js";
+import productContainer from "../components/productContainer.js";
+import deleteNodes from '../helpers/deleteNodes.js';
+import handleProductClick from '../helpers/handleProductClick.js';
 
-import { 
-  buttonAcces, 
-  sectionAdministrator, 
-  sectionBanner, 
-  sectionLogin, 
-  sectionProducts, 
-  sectionProductsDetails,
-  sectionAddProducts,
-  sectionCategory
-} from '../helpers/nodes.js'
+// variables
+const sectionCategoryProducts = document.querySelector('.category-products')
 
-import deleteNodes from '../helpers/deleteNodes.js'
+// eventos
+sectionCategoryProducts.addEventListener('click', e => handleProductClick(e))
 
-
-sectionCategory.addEventListener('click', (e) => {
-    
-  if ( e.target.classList.contains('button__link--product') ) {
-    
-    const productId = e.target.dataset.id
-    location.hash = `#product=${productId}`
-
-    document.body.scrollTop = 0
-    document.documentElement.scrollTop = 0
-  }
-})
-
-async function categoryView() {
+async function categoryView(category, products) {
   
-  buttonAcces.classList.add('inactive')
-  sectionBanner.style.display = 'none'
-  sectionProducts.style.display = 'none'
-  sectionProductsDetails.style.display = 'none'
-  sectionLogin.style.display = 'none'
-  sectionAdministrator.style.display = 'none'
-  sectionAddProducts.style.display = 'none'
-  
-  sectionCategory.style.display = 'block'
-
-  const [_, id] = location.hash.split('id=')
-  
-  // instanciar modelo
-  const categoryController = new CategoryController()
-  const categorie = await categoryController.getCategorie(id)
-  
-  const productsController = new ProductsController()
-  const products = await productsController.getProducts(categorie.id)  
-
-  // crear categorias y productos
-  deleteNodes(sectionCategory)
+  // crear html
+  deleteNodes(sectionCategoryProducts)
 
   const container = document.createElement('DIV')
   container.classList.add('products__container', 'container')
-  container.appendChild(categoryContainer(categorie.name))
+  container.appendChild(categoryContainer(category.name, false, category.id))
 
   const sectionCards = document.createElement('SECTION')
   sectionCards.classList.add('cards')
@@ -63,18 +24,17 @@ async function categoryView() {
   const cardsContainer = document.createElement('DIV')
   cardsContainer.classList.add('cards__container')
 
+  sectionCards.appendChild(cardsContainer)
   
   // agregar productos
   products.forEach(product => {
-    
     const { image, title, price, id } = product
     cardsContainer.appendChild(productContainer(image, title, price, id, false))
   });
-    
-  sectionCards.appendChild(cardsContainer)
-  container.appendChild(sectionCards)
-  sectionCategory.appendChild(container)
 
+  container.appendChild(sectionCards)
+  
+  sectionCategoryProducts.appendChild(container)
 };
 
 export default categoryView;

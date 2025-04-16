@@ -1,48 +1,42 @@
-import ProductsController from "../controllers/ProductsController.js"
-import filterProduct from "../helpers/filterProduct.js";
-import deleteNodes from "../helpers/deleteNodes.js";
-import { 
-  inputProducts, 
-  inputProductsDesktop, 
-  searchResultsDesktop,
-  searchResults, 
-  buttonBack,
-  deleteSearch
-} from '../helpers/nodes.js'
+import ProductsModel from '../models/ProductsModel.js'
+import deleteNodes from '../helpers/deleteNodes.js'
 
-let screenSize;
-
-// eventos
-buttonBack.addEventListener('click', deleteSearchProducts)
-deleteSearch.addEventListener('click', deleteSearchProducts)
+const resultsContainer = document.querySelector('.search__result')
+const inputClean = document.querySelector('.input__closed')
+const buttonBack = document.querySelector('.search__back')
 
 // funciones
 async function searchProducts(e) {
-
-  // activar la busqueda en desktop
-  screenSize = screen.availWidth
-  if ( screenSize >= 700 ) searchResultsDesktop.style.display = 'block'
   
   // instanciar product
-  const productsController = new ProductsController()
-  const products = await productsController.getProductsTotal()
+  const productsModel = new ProductsModel()
+  const productsTotal = await productsModel.getProducts()
   
   if ( e.target.value ) {
+
+    inputClean.style.display = 'block'
+    inputClean.onclick = () => deleteSearchProducts()
+    buttonBack.onclick = () => deleteSearchProducts()
     
-    deleteSearch.style.display = 'block'
-    searchResultsDesktop.style.display = 'block'
-    
-    const filter = filterProduct(products, e.target.value)
-    productsFilter(filter)
+    const products = filteredProducts(productsTotal, e.target.value)
+    productsHtml(products)
 
   } else {
     deleteSearchProducts()
   }
 }
 
-function productsFilter(products) {
-  
-  screenSize >= 700 ? deleteNodes(searchResultsDesktop) : deleteNodes(searchResults)
+function filteredProducts(products = [], searchProduct) {
+  const resultProduct = products.filter(product => {
+    return product.title.includes(searchProduct)
+  })
+
+  return resultProduct
+};
+
+function productsHtml(products) {
+
+  deleteNodes(resultsContainer)
 
   if ( products.length === 0 ) {
 
@@ -50,8 +44,7 @@ function productsFilter(products) {
     alert.classList.add('search__alert')
     alert.textContent = 'No hay resultados'
 
-    screenSize >= 700 ? searchResultsDesktop.appendChild(alert) : searchResults.appendChild(alert)
-
+    resultsContainer.appendChild(alert)
     return
   }
 
@@ -79,30 +72,25 @@ function productsFilter(products) {
     containerResult.appendChild(productContainer)
   });
   
-  screenSize >= 700
-  ? searchResultsDesktop.appendChild(containerResult)
-  : searchResults.appendChild(containerResult)
+  resultsContainer.appendChild(containerResult)
 }
 
 function showProduct(id) {
 
   const checkbox = document.querySelector('#search__checked')
   if ( checkbox.checked ) checkbox.checked = false
+  document.body.classList.remove('no-scroll')
   deleteSearchProducts()
   
-  location.hash = `#product=${id}`
+  const baseUrl = window.location.origin + "/src/pages/viewProduct.html";  
+  location.href = `${baseUrl}?id=${id}`;
 }
 
 function deleteSearchProducts() {
-  // mobil
-  inputProducts.value = ''
-  deleteSearch.style.display = 'none'
-  deleteNodes(searchResults)
-  
-  // desktop
-  inputProductsDesktop.value = ''
-  searchResultsDesktop.style.display = 'none'
-  deleteNodes(searchResultsDesktop)
+  document.querySelector('.input__search').value = ''
+  inputClean.style.display = 'none'
+
+  deleteNodes(resultsContainer)
 }
 
 export default searchProducts

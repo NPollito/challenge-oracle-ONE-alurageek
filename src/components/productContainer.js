@@ -27,10 +27,10 @@ function productContainer(image, title, price, id, buttons = Boolean) {
     containerIcons.classList.add('card__icons')
     containerIcons.innerHTML = `
       <span id="edit" title="Editar" class="card__edit" data-id=${id}>
-        <img src="./src/assets/icons/edit.svg" alt="Icono eliminar" class="card__edit" data-id=${id}>
+        <img src="../assets/icons/edit.svg" alt="Icono eliminar" class="card__edit" data-id=${id}>
       </span>
-      <span id="delete" title="Borrar" class="card__delete" data-id=${id}>
-        <img src="./src/assets/icons/delete.svg" alt="Icono eliminar" class="card__delete" data-id=${id}>
+      <span id="delete" title="Eliminar" class="card__delete" data-id=${id}>
+        <img src="../assets/icons/delete.svg" alt="Icono eliminar" class="card__delete" data-id=${id}>
       </span>
     `
 
@@ -57,7 +57,6 @@ function productContainer(image, title, price, id, buttons = Boolean) {
     containerCard.appendChild(imageCard)
     containerCard.appendChild(containerDetails)
   }
-  
   
   return containerCard
 };

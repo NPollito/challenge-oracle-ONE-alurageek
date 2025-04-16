@@ -20,6 +20,10 @@ li {
   display: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 /* Boton */
 .button__link {
   background-color: var(--color-primary);

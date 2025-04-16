@@ -25,26 +25,26 @@
       <ul class="search__container">
         <li class="buttonBack">
           <label for="search__checked">
-            <img src="../src/assets/icons/arrow_back.svg" class="search__back" alt="Icono atras" title="Atras" />
+            <img src="./src/assets/icons/arrow_back.svg" class="search__back" alt="Icono atras" title="Atras" />
           </label>
         </li>
         <li class="input input--color">
-          <input type="text" class="input__search" placeholder="Buscar" autofocus>
+          <input type="text" class="input__search" placeholder="Buscar">
           <span class="input__closed" title="Borrar Todo"></span>
         </li>
       </ul>
       <div class="search__result"></div>
     </div>
-    
+
     <label for="search__checked" class="input input--config">
-      <input type="text" class="input__search input__search--config" placeholder="¿Qué deseas Buscar?">
+      <span>¿Qué deseas Buscar?</span>
       <img src="../src/assets/icons/shared.svg" alt="Icono de busqueda" title="Buscar" />
     </label>
-    <div class="search__result-desktop"></div>
-    
+
   </header>
-  
+
   <main class="main">
+
     <section class="banner">
       <div class="banner__container container">
         <div class="banner__texts">
@@ -52,88 +52,29 @@
           <p class="banner__paragraph">
             Productos seleccionados con 33% de descuento
           </p>
-          <button class="button__link button__link--consoles" data-id="1">Ver consolas</button>
+          <button class="button__link button__link--consoles">Ver consolas</button>
         </div>
       </div>
     </section>
 
-    <section class="products"></section>
-
-    <section class="category-products"></section>
-
-    <section class="product__details"></section>
-
-    <section class="login">
-      <form class="form form__login">
-        <h3 class="form__title">Iniciar Seción</h3>
-        <div class="form__container">
-          <div class="form__group">
-            <input type="email" id="emailUser" class="form__input" name="email" placeholder=" " />
-            <label for="emailUser" class="form__label">Correo electronico</label>
-            <span class="form__line"></span>
-          </div>
-          <div class="form__group">
-            <input type="password" id="passUser" class="form__input" name="password" placeholder=" " />
-            <label for="passUser" class="form__label">Contraseña</label>
-            <span class="form__line"></span>
-          </div>
-          <input type="submit" class="button__link button__link--login" value="Entrar" disabled />
-        </div>
-      </form>
-    </section>
-
-    <section class="administrator">
-      <div class="administrator__products container">
-        <section class="administrator__texts">
-          <h2 class="administrator__title">Todos los productos</h2>
-          <button class="button__link button__link--createProduct">Agregar Producto</button>
+    <section class="products">
+      <!-- <div class="products__container container">
+        <section class="category">
+          <h2>Star Wars</h2>
+          <span class="category__link">Ver todo</span>
         </section>
-      </div>
+
+        <section class="cards">
+          <div class="cards__container">
+          <div class="cards__container">
+          <div class="cards__container">
+          <div class="cards__container">
+          <div class="cards__container">
+          <div class="cards__container">
+        </section>
+      </div> -->
     </section>
 
-    <section class="add-new-product">
-      <form class="form form__config--section form__newProduct">
-        <h3 class="form__title form__title--section">Agregar nuevo producto</h3>
-        
-        <div class="form__container">
-
-          <div class="form__group">
-            <div class="drag-drop">
-              <h3 class="drag-drop__title">Haz clic o arrastra una imagen a esta área para subirlo</h3>
-              <input type="file" name="" id="" hidden>
-            </div>
-          </div>
-
-          <div class="form__group">
-            <label class="form__label form__label--select" for="category">Categoría:</label>
-            <select id="category" name="categoryId" class="form__input form__input--select">
-              <option selected disabled>-- Seleccionar categoría --</option>
-              <option value="0">Star ward</option>
-              <option value="1">Consolas</option>
-              <option value="2">Otros</option>
-            </select>
-          </div>
-
-          <div class="form__group">
-            <input type="text" id="nom-product" class="form__input" name="title" placeholder=" " />
-            <label for="nom-product" class="form__label">Nombre del producto</label>
-            <span class="form__line"></span>
-          </div>
-          <div class="form__group">
-            <input type="number" id="price" class="form__input" name="price" placeholder=" " />
-            <label for="price" class="form__label">Precio del producto</label>
-            <span class="form__line"></span>
-          </div>
-          <div class="form__group">
-            <textarea id="description" class="form__input form__input--textarea" name="details"
-              placeholder=" "></textarea>
-            <label for="description" class="form__label">Descripción del producto</label>
-            <span class="form__line"></span>
-          </div>
-          <input type="submit" class="button__link button__link--addProduct" value="Agregar Producto" disabled />
-        </div>
-      </form>
-    </section>
   </main>
 
   <footer class="footer">
@@ -161,7 +102,8 @@
             <span class="form__line"></span>
           </div>
           <div class="form__group">
-            <textarea id="messageUser" class="form__input form__input--textarea" name="message" placeholder=" "></textarea>
+            <textarea id="messageUser" class="form__input form__input--textarea" name="message"
+              placeholder=" "></textarea>
             <label for="messageUser" class="form__label">Escribe tu mensaje</label>
             <span class="form__line"></span>
           </div>
@@ -178,7 +120,8 @@
     </a>
   </aside>
 
-  <script type="module" src="./src/app.js"></script>
+  <script src="./src/app.js" type="module"></script>
+  <script type="module" src="./src/controllers/homeController.js"></script>
 </body>
 
 </html>

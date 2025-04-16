@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alurageek editar y agregar productos</title>
+  <link rel="stylesheet" href="../assets/css/base/base.css" />
+  <link rel="stylesheet" href="../../style.css" />
+</head>
+
+<body>
+  <header class="header container">
+
+    <a href="../../index.html">
+      <img src="../assets/icons/Logo.svg" alt="logo" class="header__logo" title="Inicio" />
+    </a>
+
+    <div class="button button--config">
+      <button class="button__link button__link--administrator">Menu Administrator</button>
+    </div>
+
+  </header>
+
+  <main class="main">
+    <section class="add-new-product">
+      <form class="form form__config--section form__newProduct">
+        <h3 class="form__title form__title--section">Agregar nuevo producto</h3>
+  
+        <div class="form__container">
+  
+          <div class="form__group">
+            <div class="drag-drop">
+              <h3 class="drag-drop__title">Haz clic o arrastra una imagen a esta área para subirlo</h3>
+              <input type="file" name="" id="" hidden>
+            </div>
+          </div>
+  
+          <div class="form__group">
+            <label class="form__label form__label--select" for="category">Categoría:</label>
+            <select id="category" name="categoryId" class="form__input form__input--select">
+              <option selected disabled>-- Seleccionar categoría --</option>
+              <option value="0">Star ward</option>
+              <option value="1">Consolas</option>
+              <option value="2">Otros</option>
+            </select>
+          </div>
+  
+          <div class="form__group">
+            <input type="text" id="nom-product" class="form__input" name="title" placeholder=" " />
+            <label for="nom-product" class="form__label">Nombre del producto</label>
+            <span class="form__line"></span>
+          </div>
+          <div class="form__group">
+            <input type="number" id="price" class="form__input" name="price" placeholder=" " />
+            <label for="price" class="form__label">Precio del producto</label>
+            <span class="form__line"></span>
+          </div>
+          <div class="form__group">
+            <textarea id="description" class="form__input form__input--textarea" name="details"
+              placeholder=" "></textarea>
+            <label for="description" class="form__label">Descripción del producto</label>
+            <span class="form__line"></span>
+          </div>
+          <input type="submit" class="button__link button__link--addProduct" value="Agregar Producto" disabled />
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <aside class="aside">
+    <p>Nilton pv</p>
+    <a href="https://github.com/NPollito" target="_blank">
+      <img src="../assets/icons/github.svg" alt="logo github">
+    </a>
+  </aside>
+
+  <script src="../controllers/formProductsController.js" type="module"></script>
+</body>

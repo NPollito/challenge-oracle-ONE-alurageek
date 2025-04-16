@@ -1,59 +1,39 @@
-import router from "./router.js"
 import searchProducts from "./js/searchProducts.js"
-import { dataForm, validate, resetForm } from "./js/form.js"
-import spinner from "./components/spinner.js"
+import { validateInput, dataForm, resetForm } from "./js/form.js"
 import alertMessage from "./components/alertMessage.js"
 
-import {
-  inputProducts,
-  inputProductsDesktop,
-} from './helpers/nodes.js'
-
 // variables
+const inputSearch = document.querySelector('.input__search')
 const nameInput = document.getElementById('nameUser')
 const messageInput = document.getElementById('messageUser')
 const formFooter = document.querySelector('.form--config-footer')
+const buttonSubmitFooter = formFooter.querySelector('input[type="submit"]')
 
-// eventos
 document.addEventListener('DOMContentLoaded', () => {
   
-  window.addEventListener('hashchange', router)
-  router()
+  // buscar productos
+  inputSearch.addEventListener('input', searchProducts)
   
-  inputProducts.addEventListener('input', searchProducts )
-  inputProductsDesktop.addEventListener('input', searchProducts )
+  // enviar mensage
+  addMessage()
 })
 
-// validar formulario
-dataForm.name = ''
-dataForm.message = ''
-
-nameInput.addEventListener('input', validate)
-messageInput.addEventListener('input', validate)
-
-formFooter.addEventListener('submit', (e) => {
-  e.preventDefault()
-  e.stopPropagation();
+function addMessage() {
   
-   // verificar si existe un spinner 
-   const exists = document.querySelector('.container-spinner')
+  dataForm.name = ''
+  dataForm.message = ''
+  
+  nameInput.addEventListener('input', validateInput)
+  messageInput.addEventListener('input', validateInput)
 
-   if( !exists ) {
+  formFooter.addEventListener('submit', async (e) => {
+    e.preventDefault()
+
+    buttonSubmitFooter.disabled = true
+
+    resetForm(buttonSubmitFooter, formFooter)
     
-    const spinnerContainer = spinner()
-    spinnerContainer.style.position = 'absolute'
-    
-    formFooter.appendChild(spinnerContainer)
-
-    setTimeout(() => {
-      // quitar sppiner y resetear formulario
-      spinnerContainer.remove()
-
-      resetForm(e.target.querySelector('.button__link'), formFooter)
-      
-      alertMessage(formFooter, 'Mensaje enviado correctamente')
-
-    }, 5000)
-   }
-})
+    await alertMessage(formFooter, "El mensaje se envio correctamente")
+  })
+}
 
