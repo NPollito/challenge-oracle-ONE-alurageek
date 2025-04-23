@@ -1,6 +1,7 @@
 import { showSpinner, hideSpinner } from '../components/spinner.js'
 import alertMessage from '../components/alertMessage.js'
 import { dataForm, validateInput, resetForm } from '../js/form.js'
+import { login, logout } from '../js/protectRoutes.js'
 
 // variables
 const emailInput = document.getElementById('emailUser')
@@ -13,6 +14,8 @@ emailInput.addEventListener('input', validateInput)
 passwordInput.addEventListener('input', validateInput)
 
 export function loginView(onSubmit) {
+
+  logout()
     
   dataForm.email = ''
   dataForm.password = ''
@@ -37,6 +40,8 @@ export function loginView(onSubmit) {
     resetForm(buttonSubmit, formLogin)
     
     await alertMessage(formLogin, 'Redirigiendo...')
+    
+    login()
   
     location.pathname = './src/pages/administrator.html'
   }

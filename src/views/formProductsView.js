@@ -2,6 +2,7 @@ import { showSpinner, hideSpinner } from '../components/spinner.js'
 import alertMessage from '../components/alertMessage.js'
 
 import { dataForm, validateInput, resetForm } from "../js/form.js";
+import { verifyRoute, validateStorage } from '../js/protectRoutes.js'
 
 // variables
 const buttonAdministrator = document.querySelector('.button__link--administrator')
@@ -135,6 +136,8 @@ function showProductEditing(product) {
 }
 
 async function formProductsView(product = null, onSubmit) {
+
+  verifyRoute('formProduct.html', validateStorage)
 
   dataForm.image = ''
   dataForm.title = ''

@@ -1,5 +1,5 @@
 const API_JSON_SERVER = 'http://localhost:3000'
-const URL_VERCEL = 'https://json-test-one.vercel.app'
+const URL_VERCEL = 'https://json-server-api-omega.vercel.app'
 
 async function fetchData(endpoint, options = {}) {
   try {

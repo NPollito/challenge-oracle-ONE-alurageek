@@ -1,4 +1,5 @@
 import productContainer from '../components/productContainer.js'
+import { verifyRoute, validateStorage } from '../js/protectRoutes.js'
 
 // variables
 const buttonAddNewProduct = document.querySelector('.button__link--createProduct')
@@ -15,6 +16,8 @@ sectionAdministrator.addEventListener('click', e => {
 })
 
 function administratorView(products) {
+
+  verifyRoute('administrator.html', validateStorage)
   
   const sectionCards = document.querySelector('.cards')
 
