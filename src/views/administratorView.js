@@ -1,5 +1,6 @@
 import productContainer from '../components/productContainer.js'
 import { verifyRoute, validateStorage } from '../js/protectRoutes.js'
+import deleteNodes from '../helpers/deleteNodes.js'
 
 // variables
 const buttonAddNewProduct = document.querySelector('.button__link--createProduct')
@@ -22,6 +23,8 @@ function administratorView(products) {
   const sectionCards = document.querySelector('.cards')
 
   // crear html
+  deleteNodes(sectionCards)
+  
   const cardsContainer = document.createElement('DIV')
   cardsContainer.classList.add('cards__container')
   
