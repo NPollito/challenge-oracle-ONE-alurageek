@@ -19,6 +19,8 @@ import formProductsView from "../views/formProductsView.js";
 
   } catch (error) {
     console.error(error)
+    alert('No se puedo agregar o eliminar el producto')
+    alert('Error en el servidor, intentalo más tarde')
   }  
 
   async function validate(product, editProduct) {
@@ -35,7 +37,7 @@ import formProductsView from "../views/formProductsView.js";
       }
       
     } catch (error) {
-      alert('Error en el servidor, intentalo más tarde')
+      console.log(error);
     }
   }
 

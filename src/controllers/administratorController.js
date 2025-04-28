@@ -13,7 +13,8 @@ import administratorView from '../views/administratorView.js'
 
   } catch (error) {
     console.error('Error al obtener los productos:', error);
-    alert('No se pudieron cargar los productos. Intenta nuevamente más tarde.');
+    alert('Los productos no se pudieron cargar');
+    alert('Error en el servidor, intentalo más tarde');
   }
 
   // evento

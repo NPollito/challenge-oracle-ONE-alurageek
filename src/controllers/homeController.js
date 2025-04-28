@@ -19,8 +19,9 @@ import homeView from '../views/homeView.js'
     homeView(categoriesAndProducts)
   
   } catch(error) {
-    console.error('Error al cargar los producto ', error)
-    alert('Intentalo más tarde, actualizando productos')
+    console.error('Error al cargar los productos ', error)
+    alert('No se puede cargar los productos')
+    alert('Error en el servidor, intentalo más tarde')
   }
 
 })()

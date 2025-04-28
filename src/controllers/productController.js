@@ -15,7 +15,8 @@ import produtcView from '../views/productView.js'
   
   } catch(error) {
     console.error('Producto ', error)
-    alert('El producto no se pudo cargar intentalo más tarde')
+    alert('El producto no se pudo cargar')
+    alert('Error en el servidor, intentalo más tarde')
   }
 
 })()
